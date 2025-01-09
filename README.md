@@ -2,8 +2,7 @@
   <img src="images/numera11y.png" alt="numera11y">
 </h1>
 
-![Version](https://img.shields.io/github/package-json/v/numera11y-org
-/a11y)
+![Version](https://img.shields.io/github/package-json/v/numera11y-org/a11y)
 
 
 Bienvenue dans cette documentation dédiée aux composants HTML accessibles. Ce
