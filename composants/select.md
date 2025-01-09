@@ -1,6 +1,6 @@
-## Éléments `<select>` Liste déroulante accessibles en HTML
+# Éléments `<select>` Liste déroulante accessibles en HTML
 
-### Principes généraux
+## Principes généraux
 
 Pour rendre un élément `<select>` accessible, il faut respecter ces principes :
 
@@ -9,7 +9,7 @@ Pour rendre un élément `<select>` accessible, il faut respecter ces principes 
 - Grouper les options logiquement si nécessaire
 - Offrir des instructions claires pour la sélection
 
-### Exemple typique
+## Exemple typique
 
 ```html
 <label for="choix-fruit">Choisissez un fruit :</label>
@@ -20,9 +20,9 @@ Pour rendre un élément `<select>` accessible, il faut respecter ces principes 
 </select>
 ```
 
-### Utilisation avancée
+## Utilisation avancée
 
-#### Groupement d'options avec `<optgroup>`
+### Groupement d'options avec `<optgroup>`
 
 ```html
 <label for="choix-vehicule">Choisissez un véhicule :</label>
@@ -38,7 +38,7 @@ Pour rendre un élément `<select>` accessible, il faut respecter ces principes 
 </select>
 ```
 
-#### Option par défaut et placeholder
+### Option par défaut et placeholder
 
 ```html
 <select id="choix-pays" name="pays" required>
@@ -49,7 +49,7 @@ Pour rendre un élément `<select>` accessible, il faut respecter ces principes 
 </select>
 ```
 
-#### Utilisation de `aria-describedby` pour des instructions supplémentaires
+### Utilisation de `aria-describedby` pour des instructions supplémentaires
 
 ```html
 <label for="choix-langue">Langue :</label>
@@ -61,7 +61,7 @@ Pour rendre un élément `<select>` accessible, il faut respecter ces principes 
 <p id="langue-info">Choisissez la langue dans laquelle vous souhaitez afficher le site.</p>
 ```
 
-### Bonnes pratiques
+## Bonnes pratiques
 
 - Utilisez toujours un élément `<label>` associé au `<select>`
 - Évitez d'utiliser `onchange` pour soumettre automatiquement un formulaire
@@ -69,9 +69,9 @@ Pour rendre un élément `<select>` accessible, il faut respecter ces principes 
 - Limitez le nombre d'options pour éviter une liste trop longue
 - Considérez l'utilisation de `<datalist>` pour des listes longues avec recherche
 
-### Accessibilité avancée
+## Accessibilité avancée
 
-#### Utilisation de `aria-invalid` pour indiquer une sélection invalide
+### Utilisation de `aria-invalid` pour indiquer une sélection invalide
 
 ```html
 <select id="choix-age" name="age" aria-invalid="true" aria-describedby="age-error">
@@ -82,7 +82,7 @@ Pour rendre un élément `<select>` accessible, il faut respecter ces principes 
 <p id="age-error" role="alert">Veuillez sélectionner une tranche d'âge.</p>
 ```
 
-#### Select multiple avec instructions
+### Select multiple avec instructions
 
 ```html
 <label for="choix-competences">Compétences (maintenez Ctrl pour sélectionner plusieurs) :</label>
@@ -206,7 +206,7 @@ Concernant le tabindex, son importance est relative :
 
 En général, pour un élément select standard, il est préférable de ne pas utiliser de tabindex ou d'utiliser tabindex="0", laissant ainsi l'ordre de tabulation naturel du document intact.
 
-### Checklist pour l'audit d'accessibilité des éléments Select
+## Checklist pour l'audit d'accessibilité des éléments Select
 
 1. Présence d'un `<label>` correctement associé
 2. Texte du label clair et descriptif
@@ -218,13 +218,13 @@ En général, pour un élément select standard, il est préférable de ne pas u
 8. Taille des éléments suffisante pour une utilisation facile sur mobile
 9. Utilisation appropriée des attributs ARIA si nécessaire
 
-#### Conformité RGAA
+### Conformité RGAA
 
 1. Vérification de la conformité avec les critères du RGAA relatifs aux formulaires
 2. Respect des niveaux de conformité visés (A, AA, AAA)
 3. Documentation des non-conformités éventuelles et des solutions proposées
 
-#### Outils et méthodes
+### Outils et méthodes
 
 1. Test avec des lecteurs d'écran pour vérifier l'annonce correcte des options
 2. Vérification de l'utilisation au clavier

@@ -1,13 +1,13 @@
-## Élément `<input>` accessible
+# Élément `<input>` accessible
 
-### Principes généraux
+## Principes généraux
 
 L'élément `<input>` permet la saisie de données et doit être correctement configuré pour assurer une accessibilité optimale :
 
 - Associer chaque champ à une étiquette descriptive via `<label>`.
 - Utiliser les attributs appropriés (`required`, `aria-describedby`, `aria-invalid`) pour indiquer l'état et les exigences.
 
-### Exemple typique
+## Exemple typique
 
 ```html
 <label for="numero">Numéro de téléphone :</label>
@@ -15,12 +15,12 @@ L'élément `<input>` permet la saisie de données et doit être correctement co
 <p id="numero-help">Votre numéro doit être au format international.</p>
 ```
 
-### Accessibilité avancée
+## Accessibilité avancée
 
 - **Validation dynamique :** Ajoutez `aria-invalid="true"` pour signaler une erreur.
 - **Instructions supplémentaires :** Utilisez `aria-describedby` pour fournir des informations contextuelles.
 
-#### Exemple
+### Exemple
 
 ```html
 <div>

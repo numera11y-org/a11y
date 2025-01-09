@@ -1,6 +1,6 @@
-## Élément `<form>` accessible en HTML
+# Élément `<form>` accessible en HTML
 
-### Exemple typique
+## Exemple typique
 
 ```html
 <form action="/traitement" method="post">
@@ -8,14 +8,14 @@
 </form>
 ```
 
-### Attributs principaux
+## Attributs principaux
 
 - `action` : URL où les données du formulaire seront envoyées
 - `method` : Méthode HTTP utilisée pour l'envoi (généralement "get" ou "post")
 - `name` : Nom du formulaire, utile pour le référencement par scripts
 - `autocomplete` : Contrôle l'autocomplétion du navigateur ("on" ou "off")
 
-### Bonnes pratiques d'accessibilité
+## Bonnes pratiques d'accessibilité
 
 1. Utilisez l'attribut `aria-labelledby` pour lier un titre au formulaire :
 
@@ -41,7 +41,7 @@
 
 5. Utilisez des étiquettes explicites pour chaque champ avec `<label>`
 
-### Gestion des erreurs
+## Gestion des erreurs
 
 Utilisez l'attribut `novalidate` pour désactiver la validation native du navigateur et implémenter une validation personnalisée plus accessible :
 
@@ -51,11 +51,11 @@ Utilisez l'attribut `novalidate` pour désactiver la validation native du naviga
 </form>
 ```
 
-### Navigation au clavier
+## Navigation au clavier
 
 La navigation au clavier est généralement gérée automatiquement par le navigateur pour les éléments de formulaire standard. Assurez-vous que l'ordre des éléments est logique dans le code HTML.
 
-### Exemple complet
+## Exemple complet
 
 ```html
 <h2 id="contact-form-title">Nous contacter</h2>
@@ -70,7 +70,7 @@ La navigation au clavier est généralement gérée automatiquement par le navig
 
 Cette structure de base pour l'élément `<form>` assure une bonne accessibilité et une expérience utilisateur cohérente, tout en restant flexible pour différents types de formulaires.
 
-### Checklist pour l'audit d'accessibilité des formulaires
+## Checklist pour l'audit d'accessibilité des formulaires
 
 1. Vérifier la présence et la pertinence de l'attribut `action`
 2. S'assurer que la méthode (`method`) utilisée est appropriée pour le type de données envoyées
@@ -81,7 +81,7 @@ Cette structure de base pour l'élément `<form>` assure une bonne accessibilit�
 7. Vérifier que tous les contrôles du formulaire ont des étiquettes associées correctement
 8. S'assurer que les messages d'erreur sont liés aux champs correspondants de manière accessible
 
-### Conseils supplémentaires
+## Conseils supplémentaires
 
 1. Utilisez l'attribut `enctype="multipart/form-data"` pour les formulaires incluant des téléchargements de fichiers
 2. Considérez l'utilisation de `autocomplete="off"` pour les champs contenant des informations sensibles
@@ -89,14 +89,14 @@ Cette structure de base pour l'élément `<form>` assure une bonne accessibilit�
 4. Assurez-vous que le formulaire est responsive et s'adapte bien aux différentes tailles d'écran
 5. Testez le formulaire avec différentes technologies d'assistance pour garantir une expérience cohérente pour tous les utilisateurs
 
-### Conformité RGAA
+## Conformité RGAA
 
 1. Critère 11.1 : Chaque champ de formulaire a-t-il une étiquette ?
 2. Critère 11.2 : Chaque étiquette associée à un champ de formulaire est-elle pertinente ?
 3. Critère 11.10 : Dans chaque formulaire, le contrôle de saisie est-il utilisé de manière pertinente ?
 4. Critère 11.11 : Dans chaque formulaire, le contrôle de saisie est-il accompagné, si nécessaire, de suggestions facilitant la correction des erreurs de saisie ?
 
-### Outils et méthodes d'audit
+## Outils et méthodes d'audit
 
 1. Utilisez des outils d'inspection d'accessibilité comme WAVE ou aXe pour une première analyse automatique
 2. Effectuez des tests manuels de navigation au clavier pour vérifier l'ordre logique et l'accessibilité de tous les éléments

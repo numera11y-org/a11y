@@ -1,10 +1,10 @@
-## Élément `<fieldset>` accessible
+# Élément `<fieldset>` accessible
 
-### Principes généraux
+## Principes généraux
 
 L'élément `<fieldset>` est utilisé pour regrouper logiquement des champs de formulaire reliés, tout en fournissant un contexte clair.
 
-### Exemple typique
+## Exemple typique
 
 ```html
 <fieldset>
@@ -14,16 +14,16 @@ L'élément `<fieldset>` est utilisé pour regrouper logiquement des champs de f
 </fieldset>
 ```
 
-### Bonnes pratiques
+## Bonnes pratiques
 
 - Utilisez un `<legend>` clair et descriptif.
 - Limitez chaque `<fieldset>` à un seul groupe logique de champs.
 
-### Accessibilité avancée
+## Accessibilité avancée
 
 - Fournissez un `aria-describedby` si des instructions supplémentaires sont requises pour l'ensemble des champs.
 
-#### Exemple
+### Exemple
 
 ```html
 <fieldset aria-describedby="group-info">

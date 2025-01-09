@@ -1,6 +1,6 @@
-## Autocomplete en HTML
+# Autocomplete en HTML
 
-### Informations personnelles
+## Informations personnelles
 - `name` : Nom complet
 ```html
 <input type="text" autocomplete="name">
@@ -26,7 +26,7 @@
 <input type="text" autocomplete="nickname">
 ```
 
-### Coordonnées
+## Coordonnées
 
 - `email` : Adresse e-mail
 ```html
@@ -58,7 +58,7 @@
 <input type="tel" autocomplete="tel-local">
 ```
 
-### Adresse
+## Adresse
 
 - `street-address` : Adresse postale complète
 ```html
@@ -91,7 +91,7 @@
 <input type="text" autocomplete="country">
 ```
 
-### Informations de paiement
+## Informations de paiement
 
 - `cc-name` : Nom sur la carte de crédit
 ```html
@@ -123,7 +123,7 @@
 <input type="text" autocomplete="cc-csc">
 ```
 
-### Autres valeurs courantes
+## Autres valeurs courantes
 
 - `username` : Nom d'utilisateur
 ```html
@@ -177,7 +177,7 @@
 <input type="url" autocomplete="photo">
 ```
 
-### Valeurs spéciales
+## Valeurs spéciales
 
 - `off` : Désactive l'autocomplétion pour ce champ
 ```html

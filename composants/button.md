@@ -1,25 +1,25 @@
-## Élément `<button>` accessible
+# Élément `<button>` accessible
 
-### Principes généraux
+## Principes généraux
 
 Les boutons permettent de soumettre des formulaires ou d'effectuer des actions. Ils doivent être clairement identifiables et accessibles.
 
-### Exemple typique
+## Exemple typique
 
 ```html
 <button type="submit">Envoyer</button>
 ```
 
-### Bonnes pratiques
+## Bonnes pratiques
 
 - Utilisez des textes descriptifs pour indiquer l'action du bouton.
 - Fournissez des alternatives textuelles si le bouton contient uniquement une icône.
 
-### Accessibilité avancée
+## Accessibilité avancée
 
 - **Bouton avec icône :** Ajoutez un texte caché pour les lecteurs d'écran.
 
-#### Exemple
+### Exemple
 
 ```html
 <button>

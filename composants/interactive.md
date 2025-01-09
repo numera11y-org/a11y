@@ -1,22 +1,22 @@
-## Éléments interactifs avancés
+# Éléments interactifs avancés
 
-### Barre de progression accessible
+## Barre de progression accessible
 
-### Principes généraux
+## Principes généraux
 
 - Indiquer clairement l'état d'avancement.
 - Mettre à jour dynamiquement `aria-valuenow`.
 
-### Bonnes pratiques
+## Bonnes pratiques
 
 - Ajouter un retour visuel avec des couleurs contrastées.
 - Fournir un texte alternatif décrivant la progression pour les lecteurs d'écran.
 
-### Accessibilité avancée
+## Accessibilité avancée
 
 - **Mise à jour dynamique :** Fournissez une mise à jour en temps réel avec JavaScript pour garantir que `aria-valuenow` reflète correctement l'état de progression.
 
-#### Exemple
+### Exemple
 
 ```html
 <div id="progress" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50">

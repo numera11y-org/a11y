@@ -1,20 +1,20 @@
-## Éléments multimédias accessibles
+# Éléments multimédias accessibles
 
-### Principes généraux
+## Principes généraux
 
 - Fournir des alternatives textuelles (sous-titres, descriptions audio).
 - Assurer le contrôle complet via clavier.
 
-### Bonnes pratiques
+## Bonnes pratiques
 
 - Ajouter des sous-titres synchronisés (`<track>`).
 - Fournir un texte alternatif pour les lecteurs d'écran.
 
-### Accessibilité avancée
+## Accessibilité avancée
 
 - **Sous-titres personnalisés :** Créez vos propres sous-titres synchronisés pour plus de contrôle.
 
-#### Exemple
+### Exemple
 
 ```html
 <video controls>

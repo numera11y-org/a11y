@@ -1,6 +1,6 @@
-## Élément `<a>` (lien) accessible en HTML
+# Élément `<a>` (lien) accessible en HTML
 
-### Principes généraux
+## Principes généraux
 
 Pour rendre un lien accessible, il faut respecter ces principes :
 
@@ -9,15 +9,15 @@ Pour rendre un lien accessible, il faut respecter ces principes :
 - Distinguer visuellement les liens du texte environnant
 - Indiquer les liens qui s'ouvrent dans une nouvelle fenêtre ou mènent à un téléchargement
 
-### Exemple typique
+## Exemple typique
 
 ```html
 <a href="https://example.com">Visitez notre site web</a>
 ```
 
-### Utilisation avancée
+## Utilisation avancée
 
-#### Lien avec titre explicatif
+### Lien avec titre explicatif
 
 ```html
 <a href="https://example.com/rapport-2023.pdf" title="Télécharger le rapport annuel 2023 (PDF, 2.5 Mo)">
@@ -25,7 +25,7 @@ Pour rendre un lien accessible, il faut respecter ces principes :
 </a>
 ```
 
-#### Lien s'ouvrant dans une nouvelle fenêtre
+### Lien s'ouvrant dans une nouvelle fenêtre
 
 ```html
 <a href="https://example.com" target="_blank" rel="noopener noreferrer">
@@ -34,7 +34,7 @@ Pour rendre un lien accessible, il faut respecter ces principes :
 </a>
 ```
 
-#### Lien de téléchargement
+### Lien de téléchargement
 
 ```html
 <a href="/documents/brochure.pdf" download>
@@ -43,16 +43,16 @@ Pour rendre un lien accessible, il faut respecter ces principes :
 </a>
 ```
 
-### Bonnes pratiques
+## Bonnes pratiques
 
 - Utilisez des textes de lien descriptifs et évitez les "cliquez ici" ou "en savoir plus"
 - Assurez-vous que les liens sont visuellement distincts du texte environnant (couleur, soulignement)
 - Maintenez la cohérence dans le style des liens à travers le site
 - Évitez d'ouvrir de nouvelles fenêtres sans prévenir l'utilisateur
 
-### Accessibilité avancée
+## Accessibilité avancée
 
-#### Utilisation d'aria-label pour des liens plus descriptifs
+### Utilisation d'aria-label pour des liens plus descriptifs
 
 ```html
 <a href="https://example.com/produit123" aria-label="En savoir plus sur le produit XYZ">
@@ -60,7 +60,7 @@ Pour rendre un lien accessible, il faut respecter ces principes :
 </a>
 ```
 
-#### Indication des liens externes avec une icône
+### Indication des liens externes avec une icône
 
 ```html
 <a href="https://site-externe.com" class="external-link">
@@ -83,7 +83,7 @@ Pour rendre un lien accessible, il faut respecter ces principes :
 </style>
 ```
 
-### Navigation au clavier
+## Navigation au clavier
 
 Les liens sont nativement accessibles au clavier :
 
@@ -97,7 +97,7 @@ a:focus {
   outline-offset: 2px;
 }
 ```
-### Ancre
+## Ancre
 
 Une ancre est un lien vers un endroit précis d'une page web, qu'il s'agisse de la page courante ou d'une autre page. Elle permet de positionner le navigateur à un endroit spécifique du document.
 
@@ -120,7 +120,7 @@ Les ancres sont particulièrement utiles pour :
 
 Il est important de noter que les ancres jouent un rôle dans l'accessibilité en facilitant la navigation pour les utilisateurs de technologies d'assistance.
 
-### Ancre et accessibilité
+## Ancre et accessibilité
 
 Bien que les ancres HTML ne nécessitent pas d'instructions ARIA spécifiques pour fonctionner, il existe des bonnes pratiques pour améliorer leur accessibilité :
 
@@ -150,7 +150,7 @@ Bien que les ancres HTML ne nécessitent pas d'instructions ARIA spécifiques po
 
 Ces pratiques améliorent l'expérience des utilisateurs de technologies d'assistance sans nécessiter d'instructions ARIA spécifiques aux ancres.
 
-### Checklist pour l'audit d'accessibilité des liens
+## Checklist pour l'audit d'accessibilité des liens
 
 1. Texte des liens clair et descriptif
 2. Liens visuellement distincts du texte environnant
@@ -161,13 +161,13 @@ Ces pratiques améliorent l'expérience des utilisateurs de technologies d'assis
 7. Vérification de l'accessibilité au clavier (navigation et activation)
 8. Test avec des lecteurs d'écran pour s'assurer que le contexte est bien compris
 
-#### Conformité RGAA
+### Conformité RGAA
 
 1. Vérification de la conformité avec les critères du RGAA relatifs aux liens (thématique 6)
 2. Respect des niveaux de conformité visés (A, AA, AAA)
 3. Documentation des non-conformités éventuelles et des solutions proposées
 
-#### Outils et méthodes
+### Outils et méthodes
 
 1. Inspection visuelle des liens dans différents états (normal, survol, focus, visité)
 2. Test manuel de navigation au clavier

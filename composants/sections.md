@@ -1,10 +1,10 @@
-## Sections sémantiques
+# Sections sémantiques
 
-### Principes généraux
+## Principes généraux
 
 Les sections sémantiques telles que `<header>`, `<footer>`, `<article>`, et `<section>` permettent d'organiser le contenu de manière logique pour faciliter la navigation des utilisateurs et des technologies d'assistance.
 
-### Exemple typique
+## Exemple typique
 
 ```html
 <article>
@@ -18,18 +18,18 @@ Les sections sémantiques telles que `<header>`, `<footer>`, `<article>`, et `<s
 </article>
 ```
 
-### Bonnes pratiques
+## Bonnes pratiques
 
 - **Utilisation cohérente :**
   - Utilisez `<header>` et `<footer>` pour délimiter les sections ou en-têtes des articles.
   - Préférez `<section>` pour grouper des contenus similaires au sein d'une page.
 - **Titres descriptifs :** Chaque section doit avoir un titre pertinent pour faciliter la compréhension.
 
-### Accessibilité avancée
+## Accessibilité avancée
 
 - **Navigation ARIA :** Ajoutez `role="region"` ou `aria-labelledby` pour permettre une navigation claire et rapide.
 
-#### Exemple
+### Exemple
 
 ```html
 <section aria-labelledby="services-title">
@@ -40,7 +40,7 @@ Les sections sémantiques telles que `<header>`, `<footer>`, `<article>`, et `<s
 
 - **Structure imbriquée :** Assurez une hiérarchie logique pour les utilisateurs de lecteurs d'écran.
 
-#### Exemple
+### Exemple
 
 ```html
 <section>

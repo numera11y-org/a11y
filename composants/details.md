@@ -1,6 +1,6 @@
-## Élément `<details>` accessible en HTML
+# Élément `<details>` accessible en HTML
 
-### Principes généraux
+## Principes généraux
 
 L'élément `<details>` crée un widget de divulgation interactif, souvent appelé "accordéon". Pour le rendre accessible, il faut :
 
@@ -9,7 +9,7 @@ L'élément `<details>` crée un widget de divulgation interactif, souvent appel
 - Utiliser une structure de contenu logique
 - Considérer l'utilisation d'attributs ARIA si nécessaire
 
-### Exemple typique
+## Exemple typique
 
 ```html
 <details>
@@ -18,9 +18,9 @@ L'élément `<details>` crée un widget de divulgation interactif, souvent appel
 </details>
 ```
 
-### Utilisation avancée
+## Utilisation avancée
 
-#### Avec contenu structuré
+### Avec contenu structuré
 
 ```html
 <details>
@@ -32,7 +32,7 @@ L'élément `<details>` crée un widget de divulgation interactif, souvent appel
 </details>
 ```
 
-#### État ouvert par défaut
+### État ouvert par défaut
 
 ```html
 <details open>
@@ -41,16 +41,16 @@ L'élément `<details>` crée un widget de divulgation interactif, souvent appel
 </details>
 ```
 
-### Bonnes pratiques
+## Bonnes pratiques
 
 - Utilisez un texte clair et descriptif dans `<summary>`
 - Évitez de nicher des éléments `<details>` trop profondément
 - Assurez-vous que le contenu dans `<details>` est bien structuré
 - Considérez l'utilisation de JavaScript pour une meilleure gestion des états
 
-### Accessibilité avancée
+## Accessibilité avancée
 
-#### Utilisation d'attributs ARIA pour plus de contexte
+### Utilisation d'attributs ARIA pour plus de contexte
 
 ```html
 <details>
@@ -63,7 +63,7 @@ L'élément `<details>` crée un widget de divulgation interactif, souvent appel
 </details>
 ```
 
-#### Gestion des événements avec JavaScript
+### Gestion des événements avec JavaScript
 
 ```javascript
 const details = document.querySelector('details');
@@ -79,7 +79,7 @@ details.addEventListener('toggle', (event) => {
 });
 ```
 
-## Navigation au clavier pour `<details>` et `<summary>`
+# Navigation au clavier pour `<details>` et `<summary>`
 
 - L'élément `<details>` est nativement accessible au clavier sans nécessiter de code JavaScript supplémentaire.
 
@@ -93,7 +93,7 @@ details.addEventListener('toggle', (event) => {
 
 Ces fonctionnalités de navigation au clavier sont intégrées par défaut dans les navigateurs modernes qui prennent en charge les éléments `<details>` et `<summary>`, ce qui en fait une solution accessible sans nécessiter de code JavaScript complexe pour la gestion du clavier.
 
-### Checklist pour l'audit d'accessibilité des éléments Details
+## Checklist pour l'audit d'accessibilité des éléments Details
 
 1. Vérification de la présence d'un élément `<summary>` comme premier enfant
 2. Texte clair et descriptif dans `<summary>`
@@ -103,13 +103,13 @@ Ces fonctionnalités de navigation au clavier sont intégrées par défaut dans 
 6. Contraste suffisant pour le texte du `<summary>`
 7. Vérification du comportement sur différents navigateurs et appareils
 
-#### Conformité RGAA
+### Conformité RGAA
 
 1. Vérification de la conformité avec les critères du RGAA relatifs aux contenus additionnels apparaissant au survol ou à la prise de focus
 2. Respect des niveaux de conformité visés (A, AA, AAA)
 3. Documentation des non-conformités éventuelles et des solutions proposées
 
-#### Outils et méthodes
+### Outils et méthodes
 
 1. Test manuel de l'interaction au clavier et à la souris
 2. Utilisation d'outils d'inspection d'accessibilité
