@@ -43,3 +43,25 @@ les risques de non-conformité légale. En outre, elle offre des exemples clairs
 et des recommandations pratiques qui permettent de gagner du temps lors du
 développement, tout en garantissant des interfaces à la fois fonctionnelles et
 inclusives.
+
+## Contributors ✨
+
+Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
+
+<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
+<!-- prettier-ignore-start -->
+<!-- markdownlint-disable -->
+<table>
+  <tbody>
+    <tr>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/Isos9"><img src="https://avatars.githubusercontent.com/u/16087932?v=4?s=100" width="100px;" alt="Isos9"/><br /><sub><b>Isos9</b></sub></a><br /><a href="https://github.com/numera11y-org/a11y/commits?author=Isos9" title="Documentation">📖</a></td>
+    </tr>
+  </tbody>
+</table>
+
+<!-- markdownlint-restore -->
+<!-- prettier-ignore-end -->
+
+<!-- ALL-CONTRIBUTORS-LIST:END -->
+
+This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind welcome!

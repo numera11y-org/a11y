@@ -1,0 +1,26 @@
+{
+  "files": [
+    "README.md"
+  ],
+  "imageSize": 100,
+  "commit": false,
+  "commitType": "docs",
+  "commitConvention": "angular",
+  "contributors": [
+    {
+      "login": "Isos9",
+      "name": "Isos9",
+      "avatar_url": "https://avatars.githubusercontent.com/u/16087932?v=4",
+      "profile": "https://github.com/Isos9",
+      "contributions": [
+        "doc"
+      ]
+    }
+  ],
+  "contributorsPerLine": 7,
+  "skipCi": true,
+  "repoType": "github",
+  "repoHost": "https://github.com",
+  "projectName": "a11y",
+  "projectOwner": "numera11y-org"
+}
