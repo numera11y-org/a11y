@@ -55,6 +55,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
   <tbody>
     <tr>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/Isos9"><img src="https://avatars.githubusercontent.com/u/16087932?v=4?s=100" width="100px;" alt="Isos9"/><br /><sub><b>Isos9</b></sub></a><br /><a href="https://github.com/numera11y-org/a11y/commits?author=Isos9" title="Documentation">📖</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/numera11y"><img src="https://avatars.githubusercontent.com/u/194289234?v=4?s=100" width="100px;" alt="numera11y"/><br /><sub><b>numera11y</b></sub></a><br /><a href="https://github.com/numera11y-org/a11y/commits?author=numera11y" title="Documentation">📖</a></td>
     </tr>
   </tbody>
 </table>
@@ -64,4 +65,3 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 
 <!-- ALL-CONTRIBUTORS-LIST:END -->
 
-This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind welcome!
