@@ -57,7 +57,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 <table>
   <tbody>
     <tr>
-      <td align="center" valign="top" width="14.28%"><a href="https://github.com/numera11y"><img src="https://avatars.githubusercontent.com/u/194289234?v=4?s=100" width="100px;" alt="numera11y"/><br /><sub><b>numera11y</b></sub></a><br /><a href="https://github.com/numera11y-org/a11y/commits?author=numera11y" title="Documentation">📖</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/numera11y"><img src="https://avatars.githubusercontent.com/u/194289234?v=4?s=100" width="100px;" alt="numera11y"/><br /><sub><b>numera11y</b></sub></a><br /><a href="https://github.com/numera11y-org/a11y/commits?author=numera11y" title="Documentation">📖</a> <a href="https://github.com/numera11y-org/a11y/commits?author=numera11y" title="Code">💻</a></td>
     </tr>
   </tbody>
 </table>
