@@ -1,4 +1,4 @@
-## Éléments Select accessibles en HTML
+## Éléments <select> (Liste déroulante) accessibles en HTML
 
 ### Principes généraux
 
