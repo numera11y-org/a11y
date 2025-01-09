@@ -1,6 +1,6 @@
-## Élément `<table>` en HTML accessible
+# Élément `<table>` en HTML accessible
 
-### Principes généraux
+## Principes généraux
 
 Pour rendre un élément `<table>` accessible, il faut respecter ces principes :
 
@@ -10,7 +10,7 @@ Pour rendre un élément `<table>` accessible, il faut respecter ces principes :
 - S'assurer que le contenu est compréhensible lorsqu'il est linéarisé
 - Éviter d'utiliser les tableaux pour la mise en page
 
-### Exemple typique
+## Exemple typique
 
 ```html
 <table>
@@ -30,9 +30,9 @@ Pour rendre un élément `<table>` accessible, il faut respecter ces principes :
 </table>
 ```
 
-### Utilisation avancée
+## Utilisation avancée
 
-#### Tableau complexe avec en-têtes multiples
+### Tableau complexe avec en-têtes multiples
 
 ```html
 <table>
@@ -61,7 +61,7 @@ Pour rendre un élément `<table>` accessible, il faut respecter ces principes :
 </table>
 ```
 
-### Bonnes pratiques
+## Bonnes pratiques
 
 - Utiliser `<caption>` pour donner un titre au tableau
 - Utiliser `<th>` pour les cellules d'en-tête avec l'attribut `scope` approprié
@@ -69,9 +69,9 @@ Pour rendre un élément `<table>` accessible, il faut respecter ces principes :
 - Éviter les tableaux imbriqués ou les tableaux pour la mise en page
 - S'assurer que le contenu est compréhensible lorsqu'il est lu de manière linéaire
 
-### Accessibilité avancée
+## Accessibilité avancée
 
-#### Utilisation des attributs `id` et `headers` pour les tableaux complexes
+### Utilisation des attributs `id` et `headers` pour les tableaux complexes
 
 ```html
 <table>
@@ -93,11 +93,11 @@ Pour rendre un élément `<table>` accessible, il faut respecter ces principes :
 </table>
 ```
 
-### Navigation au clavier
+## Navigation au clavier
 
 Les tableaux HTML sont naturellement navigables au clavier. Les utilisateurs peuvent utiliser les touches fléchées pour se déplacer entre les cellules. Cependant, il est important de s'assurer que l'ordre de lecture est logique et que les relations entre les cellules sont claires pour les technologies d'assistance.
 
-### Résumé du tableau
+## Résumé du tableau
 
 Pour les tableaux complexes, il est recommandé de fournir un résumé. Bien que l'attribut `summary` soit déprécié en HTML5, on peut inclure un résumé dans la balise `<caption>` ou utiliser un élément adjacent au tableau avec un `id` référencé par `aria-describedby` sur la balise `<table>`.
 
@@ -108,7 +108,7 @@ Pour les tableaux complexes, il est recommandé de fournir un résumé. Bien que
 </table>
 ```
 
-### Checklist pour l'audit d'accessibilité
+## Checklist pour l'audit d'accessibilité
 
 1. Vérifier que le tableau utilise une structure sémantique correcte (`<table>`, `<tr>`, `<th>`, `<td>`)
 2. S'assurer que chaque tableau a un titre (`<caption>`)
@@ -119,7 +119,7 @@ Pour les tableaux complexes, il est recommandé de fournir un résumé. Bien que
 7. Tester la navigation au clavier dans le tableau
 8. Vérifier la présence d'un résumé pour les tableaux complexes
 
-#### Conformité RGAA
+### Conformité RGAA
 
 1. Critère 5.1 : Chaque tableau de données complexe a-t-il un résumé ?
 2. Critère 5.2 : Pour chaque tableau de données complexe ayant un résumé, celui-ci est-il pertinent ?
@@ -130,7 +130,7 @@ Pour les tableaux complexes, il est recommandé de fournir un résumé. Bien que
 7. Critère 5.7 : Pour chaque tableau de données, la technique appropriée permettant d'associer chaque cellule avec ses en-têtes est-elle utilisée ?
 8. Critère 5.8 : Chaque tableau de mise en page ne doit pas utiliser d'éléments propres aux tableaux de données. Cette règle est-elle respectée ?
 
-#### Outils et méthodes
+### Outils et méthodes
 
 1. Utiliser des outils d'inspection du code comme les DevTools des navigateurs
 2. Tester avec des lecteurs d'écran pour vérifier la compréhension du tableau
