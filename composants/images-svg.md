@@ -1,226 +1,134 @@
-# Images et SVG accessibles en HTML
+# Élément `<img>` en HTML accessible
 
 ## Principes généraux
 
-Pour rendre une image ou un SVG accessible, il faut respecter ces principes :
+Pour rendre un élément `<img>` accessible :
 
-- Fournir une alternative textuelle pertinente
-- Distinguer les éléments décoratifs des éléments informatifs
-- Utiliser les attributs appropriés selon le type d'image ou de SVG
-- Assurer une description détaillée pour les images complexes
+- Fournir un texte alternatif via l’attribut `alt` décrivant brièvement l'image pour les utilisateurs de technologies d’assistance.
+- Si l’image est purement décorative, utiliser `alt=""` pour l’ignorer par les lecteurs d’écran.
+- Utiliser `aria-hidden="true"` pour cacher les images décoratives ou redondantes des technologies d’assistance.
+- Fournir des légendes via `<figcaption>` lorsqu'une explication ou un contexte supplémentaire est nécessaire.
 
-## Images bitmap (JPG, PNG, GIF, etc.)
-
-### Exemple typique
+## Exemple typique
 
 ```html
-<img src="chemin/vers/image.jpg" alt="Description de l'image">
+<img src="photo-profil.jpg" alt="Photo de profil de Marie Dupont" />
 ```
 
-- `src` : indique le chemin vers le fichier image
-- `alt` : fournit une alternative textuelle
-
-### Images informatives simples
-
-```html
-<img src="logo-entreprise.png" alt="Logo de l'entreprise XYZ">
-```
+## Utilisation avancée
 
 ### Images décoratives
 
 ```html
-<img src="separateur.png" alt="">
+<img src="background.jpg" alt="" aria-hidden="true" />
 ```
 
-### Images complexes
-
-```html
-<img src="graphique-ventes.png" alt="Graphique des ventes 2023" aria-describedby="desc-graphique">
-<p id="desc-graphique">Ce graphique montre l'évolution des ventes sur l'année 2023, avec un pic en juillet et une baisse en décembre.</p>
-```
-
-### Images-liens
-
-```html
-<a href="accueil.html">
-  <img src="logo-accueil.png" alt="Retour à l'accueil">
-</a>
-```
-
-### Utilisation de `figure` et `figcaption`
+### Images avec légende
 
 ```html
 <figure>
-  <img src="photo-equipe.jpg" alt="L'équipe de développement au complet">
-  <figcaption>Notre équipe lors de la conférence annuelle 2023</figcaption>
+  <img src="chart.png" alt="Graphique montrant l'évolution des ventes trimestrielles." />
+  <figcaption>Graphique : Évolution des ventes (2023).</figcaption>
 </figure>
 ```
 
-### Boutons images
+### Fallback pour les images manquantes
 
 ```html
-<input type="image" src="bouton-recherche.png" alt="Lancer la recherche">
+<img src="logo.png" alt="Logo de l'entreprise" onerror="this.src='logo-placeholder.png'" />
 ```
 
-# Images responsives et optimisées pour les écrans haute résolution
+## Bonnes pratiques
 
-## Utilisation de l'attribut srcset
+- Décrire la fonction ou le contenu essentiel de l'image, pas uniquement son apparence.
+- Limiter l’usage de texte dans les images ; privilégier du texte HTML accessible.
+- Tester les descriptions alternatives avec des lecteurs d’écran.
 
-L'attribut `srcset` permet de spécifier plusieurs sources d'images pour différentes résolutions d'écran :
+---
 
-```html
-<img src="image-small.jpg"
-     srcset="image-small.jpg 300w,
-             image-medium.jpg 600w,
-             image-large.jpg 1200w"
-     alt="Description de l'image">
-```
+# Élément `<svg>` en HTML accessible
 
-## Utilisation de l'attribut sizes
+## Principes généraux
 
-L'attribut `sizes` complète `srcset` en indiquant la taille d'affichage de l'image selon la largeur du viewport :
+Pour rendre un élément `<svg>` accessible :
 
-```html
-<img src="image-small.jpg"
-     srcset="image-small.jpg 300w,
-             image-medium.jpg 600w,
-             image-large.jpg 1200w"
-     sizes="(max-width: 320px) 280px,
-            (max-width: 640px) 580px,
-            1100px"
-     alt="Description de l'image">
-```
+- Fournir un titre descriptif avec `<title>` et, si nécessaire, des descriptions supplémentaires avec `<desc>`.
+- Utiliser l’attribut `role="img"` pour indiquer que l'élément SVG est une image.
+- S’assurer que les SVG décoratifs sont masqués des technologies d’assistance via `aria-hidden="true"`.
+- Éviter d'intégrer des éléments de texte essentiels directement dans le SVG ; utiliser des descriptions accessibles dans le DOM.
 
-## Utilisation de l'élément picture pour l'art direction
+## Exemple typique
 
-L'élément `picture` permet de fournir différentes versions d'une image selon les caractéristiques de l'écran :
+### SVG avec description
 
 ```html
-<picture>
-  <source media="(min-width: 800px)" srcset="image-large.jpg">
-  <source media="(min-width: 500px)" srcset="image-medium.jpg">
-  <img src="image-small.jpg" alt="Description de l'image">
-</picture>
-```
-
-## Optimisation pour les écrans Retina
-
-Pour les écrans haute résolution, on peut utiliser le descripteur de densité de pixels dans `srcset` :
-
-```html
-<img src="image.jpg"
-     srcset="image.jpg 1x, image@2x.jpg 2x, image@3x.jpg 3x"
-     alt="Description de l'image">
-```
-
-## Lazy loading natif
-
-L'attribut `loading="lazy"` permet de différer le chargement des images hors écran :
-
-```html
-<img src="image.jpg" loading="lazy" alt="Description de l'image">
-```
-
-Ces techniques permettent d'optimiser le chargement des images en fonction des caractéristiques de l'appareil et de la connexion de l'utilisateur, améliorant ainsi les performances et l'expérience utilisateur. Il est important de les intégrer dans notre approche globale de l'accessibilité et de l'optimisation des images sur le web.
-
-## Images vectorielles (SVG)
-
-### SVG informatif simple
-
-```html
-<svg role="img" aria-label="Logo de l'entreprise">
-  <!-- contenu SVG -->
+<svg role="img" xmlns="http://www.w3.org/2000/svg" width="100" height="100">
+  <title>Icône d'une étoile</title>
+  <desc>Une étoile à cinq branches utilisée pour indiquer une note.</desc>
+  <polygon points="50,15 61,35 85,35 66,50 72,75 50,60 28,75 34,50 15,35 39,35" fill="gold" />
 </svg>
 ```
 
 ### SVG décoratif
 
 ```html
-<svg aria-hidden="true" focusable="false">
-  <!-- Contenu du SVG décoratif -->
+<svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="50" height="50">
+  <circle cx="25" cy="25" r="20" fill="blue" />
 </svg>
 ```
 
-### SVG avec titre accessible
+### SVG inclus dans un bouton
 
 ```html
-<svg role="img" aria-labelledby="svgTitle">
-  <title id="svgTitle">Description concise de l'image SVG</title>
-  <!-- Contenu du SVG -->
-</svg>
-```
-
-### SVG complexe avec description détaillée
-
-```html
-<svg role="img" aria-labelledby="svgTitle svgDesc">
-  <title id="svgTitle">Titre court de l'image SVG</title>
-  <desc id="svgDesc">Description détaillée du contenu et de la signification de l'image SVG.</desc>
-  <!-- Contenu du SVG -->
-</svg>
-```
-
-### SVG en tant que lien ou bouton
-
-```html
-<a href="/">
-  <svg role="img" aria-label="Accueil">
-    <!-- Contenu du SVG -->
+<button aria-label="Télécharger">
+  <svg role="img" xmlns="http://www.w3.org/2000/svg" width="16" height="16">
+    <title>Icône de téléchargement</title>
+    <path d="M8 0l4 4H9v7H7V4H4l4-4z" fill="currentColor" />
   </svg>
-</a>
+</button>
 ```
 
-## Bonnes pratiques supplémentaires
+## Bonnes pratiques
 
-- Utilisez des noms de fichiers descriptifs pour les images
-- Assurez-vous que le texte dans les images a un contraste suffisant
-- Évitez d'utiliser des images pour représenter du texte
-- Testez vos pages avec des lecteurs d'écran pour vérifier l'accessibilité
-- Pour les SVG complexes, envisagez de fournir une version alternative en texte ou en image bitmap avec une description détaillée
+- Toujours inclure une description dans `<title>` et `<desc>` pour les SVG significatifs.
+- Masquer les SVG décoratifs avec `aria-hidden="true"`.
+- S’assurer que les couleurs et contrastes utilisés dans les SVG respectent les critères d’accessibilité.
 
-## Checklist pour l'audit d'accessibilité des images et SVG
+---
 
-Lors d'un audit d'accessibilité, vérifiez les points suivants pour chaque image et SVG :
+## Navigation au clavier
 
-### Images bitmap
+Les images et SVG ne sont généralement pas interactifs, sauf s’ils sont intégrés dans un composant interactif comme un bouton ou un lien. Pour garantir leur accessibilité :
 
-1. Présence de l'attribut `alt` pour toutes les images
-2. Pertinence du contenu de l'attribut `alt` :
-   - Description appropriée pour les images informatives
-   - Attribut vide pour les images décoratives
-3. Utilisation correcte de `aria-describedby` pour les images complexes
-4. Contraste suffisant pour le texte dans les images
-5. Cohérence entre le texte de l'attribut `alt` et la fonction de l'image pour les images-liens
-6. Utilisation appropriée de `figure` et `figcaption` pour les images avec légende
+- Les éléments interactifs doivent être navigables avec **Tab**.
+- Ajouter un texte alternatif (`alt` ou ARIA) pour les éléments intégrés dans des composants.
+
+## Checklist pour l'audit d'accessibilité
+
+### Images `<img>`
+
+1. Tous les éléments `<img>` ont un attribut `alt` pertinent.
+2. Les images décoratives utilisent `alt=""` ou `aria-hidden="true"`.
+3. Les images avec une fonction ou un contenu essentiel sont correctement décrites.
+4. Les légendes associées sont utilisées avec `<figcaption>` lorsque nécessaire.
 
 ### SVG
 
-1. Présence de `role="img"` pour les SVG informatifs
-2. Utilisation correcte de `aria-label` ou `aria-labelledby` pour fournir une alternative textuelle
-3. Présence de `aria-hidden="true"` pour les SVG décoratifs
-4. Utilisation de `<title>` et `<desc>` pour les SVG complexes
-5. Cohérence entre le texte alternatif et la fonction du SVG pour les SVG servant de liens ou boutons
-
-### Vérifications générales
-
-1. Absence d'images de texte (sauf exceptions justifiées)
-2. Qualité et lisibilité des images
-3. Cohérence des alternatives textuelles avec le contenu visuel
-4. Vérification de l'accessibilité des contrôles pour les contenus interactifs (zoom, carrousel, etc.)
-5. Test avec différentes technologies d'assistance (lecteurs d'écran, etc.)
-6. Vérification de l'accessibilité sur différents appareils (desktop, mobile, tablette)
+1. Les SVG significatifs incluent un `<title>` et, si nécessaire, un `<desc>`.
+2. Les SVG décoratifs sont masqués des technologies d’assistance avec `aria-hidden="true"`.
+3. Les SVG interactifs sont intégrés dans des composants accessibles (ex. boutons).
+4. Les contrastes de couleurs des SVG respectent les normes WCAG (minimum 4,5:1).
 
 ### Conformité RGAA
 
-1. Vérification de la conformité avec les critères du RGAA relatifs aux images (thématique 1)
-2. Respect des niveaux de conformité visés (A, AA, AAA)
-3. Documentation des non-conformités éventuelles et des solutions proposées
+1. Vérification de la conformité avec les critères du RGAA relatifs aux images et contenus non textuels.
+2. Respect des niveaux de conformité visés (A, AA, AAA).
+3. Documentation des non-conformités éventuelles et des solutions proposées.
 
 ### Outils et méthodes
 
-1. Utilisation d'outils automatisés d'audit d'accessibilité
-2. Inspection manuelle du code source
-3. Tests utilisateurs avec des personnes en situation de handicap
-4. Vérification de la base de référence définie (combinaisons de technologies d'assistance, systèmes d'exploitation et navigateurs)
+1. Utiliser des extensions comme Axe ou Wave pour tester les descriptions des images et SVG.
+2. Vérifier les contrastes avec des outils comme Colour Contrast Analyser.
+3. Tester avec des lecteurs d’écran (NVDA, JAWS, VoiceOver) pour s'assurer que les descriptions sont annoncées correctement.
 
-En suivant cette checklist lors de l'audit, vous vous assurez de couvrir les principaux aspects de l'accessibilité des images et SVG, conformément aux exigences du RGAA et des WCAG. N'oubliez pas que cette vérification s'inscrit dans le cadre plus large d'un audit complet d'accessibilité, qui doit couvrir tous les aspects du site web ou de l'application.
+En suivant ces recommandations, vos images et SVG seront accessibles, garantissant une expérience utilisateur inclusive et conforme aux normes WCAG et RGAA.
