@@ -1,107 +1,124 @@
-# Élément `<form>` accessible en HTML
+# Élément `<form>` en HTML accessible
+
+## Principes généraux
+
+Pour rendre un élément `<form>` accessible, il faut respecter ces principes :
+
+- Fournir des labels clairs et descriptifs pour chaque champ de formulaire.
+- Associer chaque champ à un élément `<label>` ou utiliser les attributs `aria-label` ou `aria-labelledby` pour les champs non textuels.
+- S'assurer que le formulaire est navigable au clavier.
+- Fournir des messages d’erreur accessibles et clairs, liés aux champs concernés.
+- Utiliser des attributs comme `required`, `aria-required`, et `aria-describedby` pour indiquer les champs obligatoires et fournir des explications.
 
 ## Exemple typique
 
 ```html
-<form action="/traitement" method="post">
-  <!-- Éléments du formulaire -->
+<form action="/submit" method="post">
+  <label for="username">Nom d'utilisateur :</label>
+  <input type="text" id="username" name="username" required />
+  
+  <label for="password">Mot de passe :</label>
+  <input type="password" id="password" name="password" required />
+  
+  <button type="submit">Se connecter</button>
 </form>
 ```
 
-## Attributs principaux
+## Utilisation avancée
 
-- `action` : URL où les données du formulaire seront envoyées
-- `method` : Méthode HTTP utilisée pour l'envoi (généralement "get" ou "post")
-- `name` : Nom du formulaire, utile pour le référencement par scripts
-- `autocomplete` : Contrôle l'autocomplétion du navigateur ("on" ou "off")
-
-## Bonnes pratiques d'accessibilité
-
-1. Utilisez l'attribut `aria-labelledby` pour lier un titre au formulaire :
+### Formulaire avec validation et messages d'erreur
 
 ```html
-<h2 id="form-title">Formulaire de contact</h2>
-<form aria-labelledby="form-title">
-  <!-- Contenu du formulaire -->
+<form action="/submit" method="post" novalidate>
+  <label for="email">Adresse email :</label>
+  <input type="email" id="email" name="email" required aria-describedby="email-error" />
+  <span id="email-error" class="error-message">Entrez une adresse email valide.</span>
+  
+  <label for="age">Âge :</label>
+  <input type="number" id="age" name="age" min="18" max="99" aria-describedby="age-error" />
+  <span id="age-error" class="error-message">Âge entre 18 et 99 ans requis.</span>
+  
+  <button type="submit">Soumettre</button>
 </form>
 ```
 
-2. Ajoutez des instructions générales avec `aria-describedby` :
+### Utilisation avec ARIA pour les groupes de champs
 
 ```html
-<form aria-describedby="form-instructions">
-  <p id="form-instructions">Les champs marqués d'un astérisque (*) sont obligatoires.</p>
-  <!-- Champs du formulaire -->
+<form>
+  <fieldset>
+    <legend>Choisissez vos préférences</legend>
+    <label>
+      <input type="checkbox" name="newsletters" value="daily" />
+      Quotidiennes
+    </label>
+    <label>
+      <input type="checkbox" name="newsletters" value="weekly" />
+      Hebdomadaires
+    </label>
+  </fieldset>
+  <button type="submit">Valider</button>
 </form>
 ```
 
-3. Assurez-vous que tous les contrôles du formulaire sont accessibles au clavier
+## Bonnes pratiques
 
-4. Groupez les champs reliés avec `<fieldset>` et `<legend>`
+- Inclure une balise `<label>` explicite pour chaque champ ou utiliser `aria-label` si un label visible n’est pas applicable.
+- Structurer le formulaire avec des `<fieldset>` et `<legend>` pour regrouper les champs logiquement liés.
+- Fournir un bouton de soumission clair avec un texte explicite, par exemple, "Envoyer" ou "Valider".
+- Ajouter des indications pour les champs obligatoires (`required`) ou des contraintes spécifiques (`min`, `max`, `pattern`).
+- Inclure des messages d'erreur accessibles et précis liés aux champs concernés.
 
-5. Utilisez des étiquettes explicites pour chaque champ avec `<label>`
+## Accessibilité avancée
 
-## Gestion des erreurs
-
-Utilisez l'attribut `novalidate` pour désactiver la validation native du navigateur et implémenter une validation personnalisée plus accessible :
+### Champs obligatoires avec indications claires
 
 ```html
-<form novalidate>
-  <!-- Champs du formulaire -->
+<form>
+  <label for="fullname">Nom complet <span aria-hidden="true">*</span></label>
+  <input type="text" id="fullname" name="fullname" required aria-required="true" />
+</form>
+```
+
+### Validation dynamique avec messages accessibles
+
+```html
+<form>
+  <label for="username">Nom d'utilisateur :</label>
+  <input type="text" id="username" name="username" required aria-describedby="username-error" />
+  <span id="username-error" role="alert">Ce champ est obligatoire.</span>
 </form>
 ```
 
 ## Navigation au clavier
 
-La navigation au clavier est généralement gérée automatiquement par le navigateur pour les éléments de formulaire standard. Assurez-vous que l'ordre des éléments est logique dans le code HTML.
+Les utilisateurs peuvent naviguer dans un formulaire avec :
 
-## Exemple complet
+- **Tab** pour passer d’un champ à l’autre.
+- **Maj + Tab** pour revenir au champ précédent.
+- **Entrée** pour soumettre le formulaire lorsque le focus est sur un bouton de soumission.
 
-```html
-<h2 id="contact-form-title">Nous contacter</h2>
-<form action="/envoyer-message" method="post" aria-labelledby="contact-form-title" aria-describedby="form-instructions" novalidate>
-  <p id="form-instructions">Tous les champs sont obligatoires sauf indication contraire.</p>
+Assurez-vous que le focus est visible et que l’ordre des champs est logique.
 
-  <!-- Contenu du formulaire -->
+## Checklist pour l'audit d'accessibilité
 
-  <button type="submit">Envoyer</button>
-</form>
-```
+1. Les champs sont correctement associés à leurs labels (`<label>` ou attributs ARIA).
+2. Les champs obligatoires sont indiqués clairement (avec `required` ou `aria-required`).
+3. Les messages d’erreur sont liés aux champs correspondants et accessibles via les technologies d’assistance.
+4. La navigation au clavier est fluide et logique.
+5. Le formulaire utilise des groupes logiques pour les champs associés (via `<fieldset>` et `<legend>`).
+6. Les champs de formulaire respectent les critères de contraste requis pour les bordures, le texte ou les labels.
 
-Cette structure de base pour l'élément `<form>` assure une bonne accessibilité et une expérience utilisateur cohérente, tout en restant flexible pour différents types de formulaires.
+### Conformité RGAA
 
-## Checklist pour l'audit d'accessibilité des formulaires
+1. Vérification de la conformité avec les critères du RGAA relatifs aux formulaires.
+2. Respect des niveaux de conformité visés (A, AA, AAA).
+3. Documentation des non-conformités éventuelles et des solutions proposées.
 
-1. Vérifier la présence et la pertinence de l'attribut `action`
-2. S'assurer que la méthode (`method`) utilisée est appropriée pour le type de données envoyées
-3. Contrôler la présence d'un titre ou d'une description claire du formulaire (via `aria-labelledby` ou `aria-describedby`)
-4. Vérifier que le formulaire est entièrement utilisable au clavier
-5. S'assurer que l'ordre de tabulation des éléments du formulaire est logique
-6. Contrôler la présence de l'attribut `novalidate` si une validation personnalisée est implémentée
-7. Vérifier que tous les contrôles du formulaire ont des étiquettes associées correctement
-8. S'assurer que les messages d'erreur sont liés aux champs correspondants de manière accessible
+### Outils et méthodes
 
-## Conseils supplémentaires
+1. Utiliser des extensions de navigateur comme Axe ou Wave pour analyser l’accessibilité.
+2. Tester avec un lecteur d’écran (NVDA, JAWS, VoiceOver).
+3. Valider la conformité au RGAA et aux WCAG avec des outils comme Tanaguru ou Asqatasun.
 
-1. Utilisez l'attribut `enctype="multipart/form-data"` pour les formulaires incluant des téléchargements de fichiers
-2. Considérez l'utilisation de `autocomplete="off"` pour les champs contenant des informations sensibles
-3. Implémentez une gestion d'erreur côté client pour une meilleure expérience utilisateur, tout en maintenant une validation côté serveur
-4. Assurez-vous que le formulaire est responsive et s'adapte bien aux différentes tailles d'écran
-5. Testez le formulaire avec différentes technologies d'assistance pour garantir une expérience cohérente pour tous les utilisateurs
-
-## Conformité RGAA
-
-1. Critère 11.1 : Chaque champ de formulaire a-t-il une étiquette ?
-2. Critère 11.2 : Chaque étiquette associée à un champ de formulaire est-elle pertinente ?
-3. Critère 11.10 : Dans chaque formulaire, le contrôle de saisie est-il utilisé de manière pertinente ?
-4. Critère 11.11 : Dans chaque formulaire, le contrôle de saisie est-il accompagné, si nécessaire, de suggestions facilitant la correction des erreurs de saisie ?
-
-## Outils et méthodes d'audit
-
-1. Utilisez des outils d'inspection d'accessibilité comme WAVE ou aXe pour une première analyse automatique
-2. Effectuez des tests manuels de navigation au clavier pour vérifier l'ordre logique et l'accessibilité de tous les éléments
-3. Testez le formulaire avec différents lecteurs d'écran (NVDA, JAWS, VoiceOver) pour s'assurer que toutes les informations sont correctement annoncées
-4. Vérifiez la gestion des erreurs en soumettant intentionnellement des données incorrectes
-5. Testez le formulaire sur différents appareils et navigateurs pour garantir une expérience cohérente
-
-En suivant ces recommandations et en utilisant cette checklist lors de l'audit, vous vous assurez que vos formulaires sont pleinement accessibles et conformes aux normes WCAG et RGAA.
+En suivant ces recommandations, vos éléments `<form>` seront accessibles et conformes aux normes WCAG et RGAA, garantissant une expérience utilisateur inclusive et efficace.
