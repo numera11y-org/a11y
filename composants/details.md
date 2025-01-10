@@ -1,119 +1,114 @@
-# Élément `<details>` accessible en HTML
+# Élément `<details>` en HTML accessible
 
 ## Principes généraux
 
-L'élément `<details>` crée un widget de divulgation interactif, souvent appelé "accordéon". Pour le rendre accessible, il faut :
+Pour rendre un élément `<details>` accessible, il faut respecter ces principes :
 
-- Fournir un résumé clair avec `<summary>`
-- Assurer la navigation au clavier
-- Utiliser une structure de contenu logique
-- Considérer l'utilisation d'attributs ARIA si nécessaire
+- Utiliser l'élément `<summary>` comme titre descriptif pour fournir un résumé clair du contenu à développer.
+- Garantir que le contenu caché dans `<details>` est pertinent et accessible une fois déployé.
+- Éviter de masquer des informations critiques uniquement dans `<details>` sans indiquer clairement leur présence.
+- Tester l'interaction avec le clavier et les lecteurs d'écran.
 
 ## Exemple typique
 
 ```html
 <details>
-  <summary>Cliquez pour plus d'informations</summary>
-  <p>Contenu détaillé qui s'affiche lorsque l'élément est ouvert.</p>
+  <summary>Informations supplémentaires</summary>
+  Voici des informations détaillées sur ce sujet.
 </details>
 ```
 
 ## Utilisation avancée
 
-### Avec contenu structuré
-
-```html
-<details>
-  <summary>Nos services</summary>
-  <h3>Conception web</h3>
-  <p>Nous créons des sites web responsifs et accessibles.</p>
-  <h3>Développement d'applications</h3>
-  <p>Nous développons des applications mobiles et de bureau.</p>
-</details>
-```
-
-### État ouvert par défaut
+### Contrôle de l'état par défaut
 
 ```html
 <details open>
-  <summary>Informations importantes (ouvert par défaut)</summary>
-  <p>Ce contenu est visible dès le chargement de la page.</p>
+  <summary>Informations visibles par défaut</summary>
+  Le contenu de ce bloc est visible dès le chargement de la page.
+</details>
+```
+
+### Utilisation imbriquée
+
+```html
+<details>
+  <summary>Options avancées</summary>
+  <details>
+    <summary>Paramètres supplémentaires</summary>
+    Contenu des paramètres supplémentaires.
+  </details>
 </details>
 ```
 
 ## Bonnes pratiques
 
-- Utilisez un texte clair et descriptif dans `<summary>`
-- Évitez de nicher des éléments `<details>` trop profondément
-- Assurez-vous que le contenu dans `<details>` est bien structuré
-- Considérez l'utilisation de JavaScript pour une meilleure gestion des états
+- Fournir un texte clair et concis pour `<summary>`.
+- S'assurer que l'ouverture et la fermeture de `<details>` ne perturbent pas les utilisateurs (pas de focus automatique ou de contenu déplacé brusquement).
+- Ajouter une animation douce pour les transitions, si possible, pour améliorer l'expérience utilisateur.
+- Tester les comportements sur divers navigateurs et technologies d’assistance.
 
 ## Accessibilité avancée
 
-### Utilisation d'attributs ARIA pour plus de contexte
+### Fournir des indications supplémentaires
 
 ```html
 <details>
-  <summary aria-expanded="false" aria-controls="section1">
-    Détails sur notre politique de confidentialité
-  </summary>
-  <div id="section1">
-    <p>Notre politique de confidentialité explique comment nous utilisons vos données...</p>
-  </div>
+  <summary>Voir les détails <span aria-hidden="true">(cliquez pour développer)</span></summary>
+  Voici les détails de cette section.
 </details>
 ```
 
-### Gestion des événements avec JavaScript
+### Indiquer visuellement l'état ouvert/fermé
 
-```javascript
-const details = document.querySelector('details');
-details.addEventListener('toggle', (event) => {
-  if (event.target.open) {
-    console.log('Le contenu est maintenant visible');
-    // Mettre à jour aria-expanded si utilisé
-    event.target.querySelector('summary').setAttribute('aria-expanded', 'true');
-  } else {
-    console.log('Le contenu est maintenant caché');
-    event.target.querySelector('summary').setAttribute('aria-expanded', 'false');
+```html
+<style>
+  summary::after {
+    content: " ▶";
   }
-});
+  details[open] summary::after {
+    content: " ▼";
+  }
+</style>
+<details>
+  <summary>Plus d'informations</summary>
+  Voici un contenu détaillé.
+</details>
 ```
 
-# Navigation au clavier pour `<details>` et `<summary>`
+## Navigation au clavier
 
-- L'élément `<details>` est nativement accessible au clavier sans nécessiter de code JavaScript supplémentaire.
+Les utilisateurs peuvent naviguer dans un élément `<details>` avec :
 
-- Les utilisateurs peuvent naviguer jusqu'à l'élément `<summary>` en utilisant la touche Tab.
+- **Tab** pour atteindre `<summary>`.
+- **Entrée** ou **Espace** pour ouvrir ou fermer `<details>`.
 
-- Une fois que le focus est sur l'élément `<summary>`, les utilisateurs peuvent :
-  - Ouvrir ou fermer le contenu en appuyant sur la touche Espace ou Entrée.
-  - Naviguer dans le contenu révélé en utilisant les flèches du clavier une fois qu'il est ouvert.
+Si des styles personnalisés sont appliqués, il est important de conserver un focus visible.
 
-- Le comportement par défaut permet une utilisation intuitive et conforme aux attentes des utilisateurs de technologies d'assistance.
+```css
+summary:focus {
+  outline: 2px solid blue;
+}
+```
 
-Ces fonctionnalités de navigation au clavier sont intégrées par défaut dans les navigateurs modernes qui prennent en charge les éléments `<details>` et `<summary>`, ce qui en fait une solution accessible sans nécessiter de code JavaScript complexe pour la gestion du clavier.
+## Checklist pour l'audit d'accessibilité
 
-## Checklist pour l'audit d'accessibilité des éléments Details
-
-1. Vérification de la présence d'un élément `<summary>` comme premier enfant
-2. Texte clair et descriptif dans `<summary>`
-3. Contenu bien structuré à l'intérieur de `<details>`
-4. Vérification de la navigation au clavier (ouverture/fermeture avec Entrée ou Espace)
-5. Test avec des lecteurs d'écran pour s'assurer que l'état ouvert/fermé est annoncé
-6. Contraste suffisant pour le texte du `<summary>`
-7. Vérification du comportement sur différents navigateurs et appareils
+1. Le contenu de `<summary>` est-il clair et descriptif ?
+2. Les interactions (ouverture/fermeture) fonctionnent-elles au clavier ?
+3. Les lecteurs d’écran annoncent-ils correctement l’état (ouvert/fermé) ?
+4. Le contenu à l'intérieur de `<details>` est-il lisible et structuré ?
+5. Le focus reste-t-il logique après l'ouverture/fermeture de `<details>` ?
 
 ### Conformité RGAA
 
-1. Vérification de la conformité avec les critères du RGAA relatifs aux contenus additionnels apparaissant au survol ou à la prise de focus
-2. Respect des niveaux de conformité visés (A, AA, AAA)
-3. Documentation des non-conformités éventuelles et des solutions proposées
+1. Vérification de la conformité avec les critères du RGAA relatifs aux éléments interactifs.
+2. Respect des niveaux de conformité visés (A, AA, AAA).
+3. Documentation des non-conformités éventuelles et des solutions proposées.
 
 ### Outils et méthodes
 
-1. Test manuel de l'interaction au clavier et à la souris
-2. Utilisation d'outils d'inspection d'accessibilité
-3. Tests avec différentes technologies d'assistance
-4. Vérification du rendu et du comportement sur divers navigateurs et appareils
+1. Utiliser des extensions de navigateur comme Axe ou Wave pour analyser l’accessibilité.
+2. Tester avec un lecteur d’écran (NVDA, JAWS, VoiceOver).
+3. Valider la conformité au RGAA et aux WCAG avec des outils comme Tanaguru ou Asqatasun.
 
-En suivant ces recommandations, vous vous assurez que vos éléments `<details>` sont accessibles et conformes aux normes WCAG et RGAA, offrant ainsi une expérience utilisateur inclusive pour tous, y compris les personnes utilisant des technologies d'assistance.
+En suivant ces recommandations, vos éléments `<details>` seront accessibles et conformes aux normes WCAG et RGAA, offrant une expérience inclusive et conviviale pour tous les utilisateurs.
