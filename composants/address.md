@@ -1,6 +1,6 @@
-## Élément `<address>` en HTML accessible
+# Élément `<address>` en HTML accessible
 
-### Principes généraux
+## Principes généraux
 
 Pour rendre un élément `<address>` accessible, il faut respecter ces principes :
 
@@ -8,7 +8,7 @@ Pour rendre un élément `<address>` accessible, il faut respecter ces principes
 - S'assurer que le contenu est pertinent et se limite aux coordonnées
 - Placer l'élément de manière appropriée dans la structure du document
 
-### Exemple typique
+## Exemple typique
 
 ```html
 <address>
@@ -18,9 +18,9 @@ Pour rendre un élément `<address>` accessible, il faut respecter ces principes
 </address>
 ```
 
-### Utilisation avancée
+## Utilisation avancée
 
-#### Dans un article
+### Dans un article
 
 ```html
 <article>
@@ -33,7 +33,7 @@ Pour rendre un élément `<address>` accessible, il faut respecter ces principes
 </article>
 ```
 
-#### Dans le pied de page
+### Dans le pied de page
 
 ```html
 <footer>
@@ -45,16 +45,16 @@ Pour rendre un élément `<address>` accessible, il faut respecter ces principes
 </footer>
 ```
 
-### Bonnes pratiques
+## Bonnes pratiques
 
 - Limiter le contenu aux informations de contact pertinentes
 - Ne pas inclure d'éléments de titre (`<h1>` à `<h6>`) ou de section (`<article>`, `<section>`, etc.) à l'intérieur
 - Éviter d'utiliser `<address>` pour des adresses non liées aux contacts du site ou de l'auteur
 - Assurer une structure cohérente du document en plaçant `<address>` de manière appropriée
 
-### Accessibilité avancée
+## Accessibilité avancée
 
-#### Utilisation d'ARIA pour améliorer la sémantique
+### Utilisation d'ARIA pour améliorer la sémantique
 
 ```html
 <address aria-label="Coordonnées de l'entreprise">
@@ -63,24 +63,24 @@ Pour rendre un élément `<address>` accessible, il faut respecter ces principes
 </address>
 ```
 
-### Navigation au clavier
+## Navigation au clavier
 
 L'élément `<address>` n'a pas d'impact direct sur la navigation au clavier. Cependant, assurez-vous que les liens éventuels à l'intérieur sont accessibles au clavier.
 
-### Checklist pour l'audit d'accessibilité
+## Checklist pour l'audit d'accessibilité
 
 1. Vérifier que `<address>` est utilisé uniquement pour les informations de contact pertinentes
 2. S'assurer que le contenu est limité aux coordonnées et n'inclut pas d'éléments de structure inappropriés
 3. Contrôler le placement correct de `<address>` dans la structure du document
 4. Vérifier l'accessibilité des liens éventuels à l'intérieur de `<address>`
 
-#### Conformité RGAA
+### Conformité RGAA
 
 1. Vérification de la conformité avec les critères du RGAA relatifs à la structure de l'information (thématique 9)
 2. Respect des niveaux de conformité visés (A, AA, AAA)
 3. Documentation des non-conformités éventuelles et des solutions proposées
 
-#### Outils et méthodes
+### Outils et méthodes
 
 1. Inspection visuelle du code HTML pour vérifier l'utilisation correcte de `<address>`
 2. Utilisation d'outils de validation d'accessibilité automatisés
