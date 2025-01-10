@@ -20,6 +20,11 @@ accompagnera à chaque étape.
 
 Explorez, implémentez et créez des interfaces inclusives.
 
+## Sommaire
+
+- [Méthodologie](#méthodologie)
+- [Impact et Avantages](#impact-et-avantages)
+- [Composants](TOC.md)
 
 ## Méthodologie
 
