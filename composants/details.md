@@ -93,11 +93,12 @@ summary:focus {
 
 ## Checklist pour l'audit d'accessibilité
 
-1. Le contenu de `<summary>` est-il clair et descriptif ?
-2. Les interactions (ouverture/fermeture) fonctionnent-elles au clavier ?
-3. Les lecteurs d’écran annoncent-ils correctement l’état (ouvert/fermé) ?
-4. Le contenu à l'intérieur de `<details>` est-il lisible et structuré ?
-5. Le focus reste-t-il logique après l'ouverture/fermeture de `<details>` ?
+1. Le contenu de `<summary>` est clair et descriptif.
+2. Les interactions (ouverture/fermeture) fonctionnent correctement au clavier.
+3. Les lecteurs d’écran annoncent correctement l’état (ouvert/fermé).
+4. Le contenu à l'intérieur de `<details>` est lisible et structuré.
+5. Le focus reste logique après l'ouverture/fermeture de `<details>`.
+
 
 ### Conformité RGAA
 
