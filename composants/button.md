@@ -80,11 +80,11 @@ button:focus {
 
 ## Checklist pour l'audit d'accessibilité
 
-1. Le bouton est-il sémantique (balise `<button>` ou rôle explicite) ?
-2. Un texte ou une alternative est-il fourni pour les boutons uniquement graphiques ?
-3. Les boutons sont-ils utilisables avec le clavier (Tab, Entrée, Espace) ?
-4. Le contraste entre le texte du bouton et son arrière-plan est-il suffisant (minimum 4,5:1) ?
-5. Le focus est-il visible lorsque le bouton est activé ?
+1. L'élément utilise une balise `<button>` ou un rôle explicite pour indiquer sa fonction.
+2. Un texte ou une alternative accessible est fourni pour les boutons contenant uniquement des éléments graphiques.
+3. Les boutons sont entièrement fonctionnels avec le clavier, incluant la navigation avec **Tab** et l'activation avec **Entrée** ou **Espace**.
+4. Le contraste entre le texte du bouton et son arrière-plan respecte le minimum requis de 4,5:1.
+5. Un indicateur visuel de focus est clairement visible lorsque le bouton est activé.
 
 ### Conformité RGAA
 
