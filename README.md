@@ -24,7 +24,8 @@ Explorez, implémentez et créez des interfaces inclusives.
 
 - [Méthodologie](#méthodologie)
 - [Impact et Avantages](#impact-et-avantages)
-- [Composants](TOC.md)
+- [Composants](TOC.md#composants)
+- [Scénarios](TOC.md#scénarios)
 - [Outils](#outils)
 
 ## Méthodologie

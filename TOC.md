@@ -20,3 +20,13 @@
 - [tableaux](composants/tableaux.md)
 - [titres](composants/titres.md)
 - [video](composants/video.md)
+
+
+# Scénarios
+
+- [accordeon](scenarios/accordeon.md)
+- [darkmode](scenarios/darkmode.md)
+- [dob](scenarios/dob.md)
+- [filtre](scenarios/filtre.md)
+- [mot-de-passe](scenarios/mot-de-passe.md)
+- [pagination](scenarios/pagination.md)
