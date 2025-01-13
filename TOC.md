@@ -24,9 +24,16 @@
 
 # Scénarios
 
-- [accordeon](scenarios/accordeon.md)
+- [accordion](scenarios/accordion.md)
+- [button](scenarios/button.md)
+- [checkbox](scenarios/checkbox.md)
 - [darkmode](scenarios/darkmode.md)
 - [dob](scenarios/dob.md)
-- [filtre](scenarios/filtre.md)
+- [external-link](scenarios/external-link.md)
+- [filter](scenarios/filter.md)
 - [mot-de-passe](scenarios/mot-de-passe.md)
 - [pagination](scenarios/pagination.md)
+- [panel](scenarios/panel.md)
+- [progress](scenarios/progress.md)
+- [radio-button](scenarios/radio-button.md)
+- [search](scenarios/search.md)
