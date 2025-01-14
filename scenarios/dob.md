@@ -19,7 +19,7 @@ La structure HTML doit être sémantique et inclure des attributs ARIA pour une 
   - `aria-required="true"` pour indiquer que la saisie est obligatoire.
   - Utilisation de `type="number"` pour chaque champ afin de guider l'utilisateur dans le format attendu.
 
-### Comportement JavaScript accessible
+### Comportement javascript accessible
 
 - **Validation en Temps Réel :** Fournir des retours immédiats sur la validité des entrées sans perturber l'utilisateur.
 - **Gestion des Erreurs :** Informer clairement l'utilisateur en cas d'erreur, en utilisant des messages textuels associés aux champs concernés.

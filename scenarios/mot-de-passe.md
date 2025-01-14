@@ -1,4 +1,4 @@
-# Guide d’Implémentation d’un champ de mot de passe accessible
+# Guide d’implémentation d’un champ de mot de passe accessible
 
 ## Introduction
 
@@ -8,7 +8,7 @@ Les champs de mot de passe sont essentiels pour la sécurité des utilisateurs. 
 
 ## Description technique
 
-### Structure HTML Accessible
+### Structure HTML accessible
 
 La structure HTML doit être sémantique et inclure des attributs ARIA pour une meilleure compréhension par les technologies d’assistance.
 
@@ -19,13 +19,13 @@ La structure HTML doit être sémantique et inclure des attributs ARIA pour une 
   - `aria-label` sur le bouton pour indiquer son action, par exemple, "Afficher le mot de passe" ou "Masquer le mot de passe".
   - `aria-live="polite"` sur un élément contenant des messages d'erreur ou d'information pour informer les utilisateurs des changements.
 
-### Comportement JavaScript accessible
+### Comportement javascript accessible
 
 - **Gestion de la visibilité du mot de passe :** Le bouton doit permettre de basculer entre les modes texte et mot de passe, en mettant à jour l'attribut `type` du champ de saisie.
 - **Mise à jour des attributs ARIA :** Mettre à jour dynamiquement le `aria-label` du bouton en fonction de l'état actuel (affiché ou masqué).
 - **Validation en Temps Réel :** Fournir des retours immédiats sur la validité du mot de passe sans perturber l'utilisateur.
 
-## Bonnes pratiques d’Accessibilité
+## Bonnes pratiques d’accessibilité
 
 - **Respect des standards :**
   - Suivre les directives WCAG 2.1, notamment le critère 1.3.1 sur l'information et les relations.

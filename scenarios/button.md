@@ -17,7 +17,7 @@ La structure HTML doit être sémantique et inclure des attributs ARIA pour une 
   - `aria-label` : Fournit une description accessible si le texte du bouton n'est pas suffisamment explicite.
   - `role="button"` : Utilisé sur des éléments non-boutons (comme `<a>`) pour indiquer leur fonction de bouton.
 
-### Comportement JavaScript accessible
+### Comportement javascript accessible
 
 - **Gestion des Événements :** Assurer que les événements associés au bouton sont accessibles via le clavier (par exemple, en écoutant les événements `click` et `keydown`).
 - **Focus Visible :** Assurer qu'un indicateur de focus est présent lorsque le bouton est sélectionné via le clavier.

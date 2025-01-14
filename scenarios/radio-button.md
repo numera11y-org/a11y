@@ -1,4 +1,4 @@
-# Guide d’Implémentation de Boutons Radio Accessibles
+# Guide d’implémentation de boutons radio accessibles
 
 ## Introduction
 
@@ -6,9 +6,9 @@ Les boutons radio permettent aux utilisateurs de sélectionner une seule option 
 
 **Démo :** [CodePen](https://codepen.io/numera11y/pen/WbezMbv)
 
-## Description Technique
+## Description technique
 
-### Structure HTML Accessible
+### Structure HTML accessible
 
 La structure HTML doit être sémantique et inclure des attributs ARIA pour une meilleure compréhension par les technologies d’assistance.
 
@@ -16,12 +16,12 @@ La structure HTML doit être sémantique et inclure des attributs ARIA pour une 
 - **Bouton Radio (`<input type="radio">`) :** Permet la sélection d'une option.
 - **Étiquette (`<label>`) :** Associée à chaque bouton radio pour indiquer son objectif.
 
-### Comportement JavaScript Accessible
+### Comportement javascript accessible
 
 - **Gestion du Focus :** Assurer que les boutons radio sont focusables et que les utilisateurs peuvent naviguer entre eux en utilisant le clavier.
 - **Mise à Jour Dynamique :** Si l'état des boutons radio est modifié via JavaScript, s'assurer que les attributs ARIA sont mis à jour en conséquence.
 
-## Bonnes Pratiques d’Accessibilité
+## Bonnes pratiques d’accessibilité
 
 - **Respect des Standards :**
   - Suivre les directives WCAG 2.1, notamment le critère 1.3.1 sur l'information et les relations.
@@ -31,13 +31,13 @@ La structure HTML doit être sémantique et inclure des attributs ARIA pour une 
 - **Compatibilité Multi-Appareils :**
   - Tester les boutons radio sur différents appareils et navigateurs pour garantir une expérience uniforme.
 
-## Recommandations Supplémentaires
+## Recommandations supplémentaires
 
 - **Amélioration de l’Expérience Utilisateur :**
   - Fournir des descriptions supplémentaires si nécessaire pour clarifier l'objectif de chaque bouton radio.
   - Assurer que la zone cliquable est suffisamment grande pour faciliter l'interaction, en incluant l'étiquette associée.
 
-## Exemple de Code Accessible
+## Exemple de code accessible
 
 ```html
 <form>

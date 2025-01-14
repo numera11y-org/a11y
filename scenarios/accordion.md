@@ -1,4 +1,4 @@
-# Guide d’implémentation d’un Accordéon accessible
+# Guide d’implémentation d’un accordéon accessible
 
 ## Introduction
 
@@ -18,7 +18,7 @@ Un accordéon est un composant d’interface utilisateur permettant d’afficher
   - `role="region"` : indique qu’il s’agit d’une zone de contenu.
   - Un ID correspondant à l’attribut `aria-controls` des boutons.
 
-### Comportement JavaScript
+### Comportement javascript
 
 - Les boutons sont configurés avec des écouteurs d’événements `click`.
 - L’état de `aria-expanded` est mis à jour dynamiquement pour refléter l’état d’ouverture ou de fermeture.

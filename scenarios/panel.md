@@ -1,4 +1,4 @@
-# Guide d’Implémentation d’un Panneau d’Information Accessible
+# Guide d’implémentation d’un panneau d’information accessible
 
 ## Introduction
 
@@ -6,9 +6,9 @@ Les panneaux d'information sont utilisés pour afficher des messages importants 
 
 **Démo :** [CodePen](https://codepen.io/numera11y/pen/NPKYMwm)
 
-## Description Technique
+## Description technique
 
-### Structure HTML Accessible
+### Structure HTML accessible
 
 La structure HTML doit être sémantique et inclure des attributs ARIA pour une meilleure compréhension par les technologies d’assistance.
 
@@ -18,12 +18,12 @@ La structure HTML doit être sémantique et inclure des attributs ARIA pour une 
   - `aria-live="assertive"` : Informe les technologies d’assistance que le contenu doit être annoncé immédiatement.
   - `aria-labelledby` : Associe le panneau à un titre descriptif.
 
-### Comportement JavaScript Accessible
+### Comportement javascript accessible
 
 - **Affichage Dynamique :** Si le panneau est affiché ou mis à jour dynamiquement, s'assurer que les attributs ARIA sont correctement mis en place pour notifier les utilisateurs des changements.
 - **Fermeture du Panneau :** Si le panneau peut être fermé par l'utilisateur, fournir un bouton avec un `aria-label` explicite, tel que "Fermer l'alerte".
 
-## Bonnes Pratiques d’Accessibilité
+## Bonnes pratiques d’accessibilité
 
 - **Respect des Standards :**
   - Suivre les directives WCAG 2.1, notamment le critère 4.1.3 sur les messages d'état.
@@ -33,13 +33,13 @@ La structure HTML doit être sémantique et inclure des attributs ARIA pour une 
 - **Compatibilité Multi-Appareils :**
   - Tester le panneau sur différents appareils et navigateurs pour garantir une expérience uniforme.
 
-## Recommandations Supplémentaires
+## Recommandations supplémentaires
 
 - **Amélioration de l’Expérience Utilisateur :**
   - Fournir des options pour que l'utilisateur puisse interagir avec le panneau, comme le masquer ou en savoir plus.
   - Assurer que le panneau n'obstrue pas le contenu principal et qu'il est facilement navigable au clavier.
 
-## Exemple de Code Accessible
+## Exemple de code accessible
 
 ```html
 <div role="alert" aria-live="assertive" aria-labelledby="infoPanelTitle" id="infoPanel">

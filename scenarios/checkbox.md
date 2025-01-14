@@ -18,7 +18,7 @@ La structure HTML doit être sémantique et inclure des attributs ARIA pour une 
   - `aria-checked` : Indique l'état actuel de la case à cocher (vrai, faux ou indéterminé).
   - `aria-labelledby` ou `aria-label` : Fournit une description accessible si l'étiquette visible n'est pas suffisante.
 
-### Comportement JavaScript accessible
+### Comportement javascript accessible
 
 - **Mise à jour dynamique :** Si l'état de la case à cocher est modifié via JavaScript, s'assurer que l'attribut `aria-checked` est mis à jour en conséquence.
 - **Gestion du Focus :** Assurer que la case à cocher est focusable et que les utilisateurs peuvent naviguer jusqu'à elle en utilisant le clavier.

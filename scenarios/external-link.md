@@ -19,7 +19,7 @@ La structure HTML doit être sémantique et inclure des attributs ARIA pour une 
   - `rel="noopener noreferrer"` : Améliore la sécurité en empêchant la page référencée d'accéder à `window.opener`.
   - `aria-label` : Fournit une description accessible si le texte du lien n'est pas suffisamment explicite.
 
-### Comportement JavaScript accessible
+### Comportement javascript accessible
 
 - **Indication visuelle :** Ajouter des icônes ou des indices visuels pour signaler que le lien ouvre une nouvelle fenêtre ou mène à un site externe.
 - **Notifications aux utilisateurs :** Informer les utilisateurs que le lien s'ouvrira dans un nouvel onglet, soit via du texte visible, soit via des attributs ARIA.

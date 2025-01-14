@@ -1,4 +1,4 @@
-# Guide d’Implémentation d’une Pagination Accessible
+# Guide d’implémentation d’une pagination accessible
 
 ## Introduction
 
@@ -6,9 +6,9 @@ La pagination est une composante essentielle des interfaces utilisateur, permett
 
 **Démo :** [CodePen](https://codepen.io/numera11y/pen/GgKxQXg)
 
-## Description Technique
+## Description technique
 
-### Structure HTML Accessible
+### Structure HTML accessible
 
 La structure HTML de la pagination doit être sémantique et inclure des attributs ARIA pour une meilleure compréhension par les technologies d’assistance.
 
@@ -28,13 +28,13 @@ La structure HTML de la pagination doit être sémantique et inclure des attribu
   - Les liens sont naturellement focusables avec le clavier.
   - Assurez-vous que l’ordre des éléments dans le DOM correspond à l’ordre visuel pour une navigation intuitive.
 
-### Comportement JavaScript Accessible
+### Comportement javascript accessible
 
 - **Mise à Jour Dynamique :** Lorsqu'une nouvelle page est chargée via JavaScript, déplacez le focus vers une zone pertinente, comme le début du nouveau contenu, pour informer l'utilisateur.
 
 - **Gestion des Attributs ARIA :** Mettez à jour les attributs ARIA pour refléter l'état actuel de la pagination, comme en appliquant `aria-current="page"` au lien correspondant.
 
-## Bonnes Pratiques d’Accessibilité
+## Bonnes pratiques d’accessibilité
 
 - **Respect des Standards :**
 
@@ -48,12 +48,12 @@ La structure HTML de la pagination doit être sémantique et inclure des attribu
 
   - Testez la pagination sur différents appareils (ordinateurs, mobiles, tablettes) et technologies d’assistance.
 
-## Recommandations Supplémentaires
+## Recommandations supplémentaires
 
 - **Amélioration de l’Expérience Utilisateur :**
   - Ajoutez des raccourcis clavier pour naviguer rapidement entre les pages.
 
-## Exemple de Code Accessible
+## Exemple de code accessible
 
 ```html
 <nav aria-label="Pagination">

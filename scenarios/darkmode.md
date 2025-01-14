@@ -1,4 +1,4 @@
-# Guide d’implémentation d’un DarkMode accessible
+# Guide d’implémentation d’un darkmode accessible
 
 ## Introduction
 
@@ -17,7 +17,7 @@ La structure HTML doit être sémantique et inclure des attributs ARIA pour une 
   - `aria-label` pour décrire l'action du bouton, par exemple, "Activer le mode sombre" ou "Activer le mode clair".
   - `aria-live="polite"` sur un élément contenant le nom du mode actuel pour informer les utilisateurs des changements.
 
-### Comportement JavaScript accessible
+### Comportement javascript accessible
 
 - **Gestion des Événements :** Le bouton doit écouter les événements de clic pour basculer entre les modes.
 - **Mise à Jour des Attributs ARIA :** Mettre à jour dynamiquement le `aria-label` du bouton en fonction du mode actif.

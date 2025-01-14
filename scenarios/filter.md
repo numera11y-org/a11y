@@ -1,4 +1,4 @@
-# Guide d’Accessibilité : Filtrage de Liste avec Support pour Lecteurs d’Écran
+# Guide d’accessibilité : filtrage de liste avec support pour lecteurs d’écran
 
 ## Introduction
 
@@ -6,7 +6,7 @@ Ce guide présente la mise en œuvre d'un composant de filtrage de liste accessi
 
 **Démo :** [Filtrage de Liste Accessible](https://codepen.io/numera11y/pen/RNbMMYp)
 
-## Description Technique
+## Description technique
 
 ### Structure HTML
 
@@ -22,7 +22,7 @@ La structure HTML du composant suit une approche sémantique pour assurer une ac
 - **Assistance à la Navigation Clavier :**
   Tous les éléments interactifs sont naturellement accessibles au clavier, garantissant une navigation fluide pour tous les utilisateurs.
 
-### Comportement JavaScript
+### Comportement javascript
 
 JavaScript gère la logique dynamique du filtrage, mettant à jour l'affichage des éléments de la liste en fonction des saisies de l'utilisateur.
 
@@ -30,7 +30,7 @@ JavaScript gère la logique dynamique du filtrage, mettant à jour l'affichage d
 - Les modifications dynamiques dans le DOM sont immédiatement reflétées, permettant aux lecteurs d'écran de détecter et d'annoncer les changements.
 - L'implémentation reste simple et légère, tout en respectant les bonnes pratiques d'accessibilité.
 
-## Bonnes Pratiques d’Accessibilité
+## Bonnes pratiques d’accessibilité
 
 - **Respect des Standards :**
   Le composant est conforme aux normes WCAG 2.1, avec une attention particulière à la navigation au clavier et à la compatibilité avec les lecteurs d'écran.
@@ -41,12 +41,12 @@ JavaScript gère la logique dynamique du filtrage, mettant à jour l'affichage d
 - **Compatibilité Multi-Appareils :**
   Le composant est testé sur plusieurs plateformes et navigateurs pour garantir une expérience cohérente et sans friction.
 
-## Recommandations Supplémentaires
+## Recommandations supplémentaires
 
 - **Amélioration de l’Expérience Utilisateur :**
   Des fonctionnalités supplémentaires, comme un compteur d'éléments filtrés ou des animations visuelles, peuvent être intégrées tout en restant accessibles.
 
-## Exemple de Code Accessible
+## Exemple de code accessible
 
 ```html
 <!-- Exemple HTML -->

@@ -1,4 +1,4 @@
-# Guide d’Implémentation d’un Champ de Recherche Accessible
+# Guide d’implémentation d’un champ de recherche accessible
 
 ## Introduction
 
@@ -6,9 +6,9 @@ Les champs de recherche sont des éléments courants sur les sites web, permetta
 
 **Démo :** [CodePen](https://codepen.io/numera11y/pen/OPLvQQV)
 
-## Description Technique
+## Description technique
 
-### Structure HTML Accessible
+### Structure HTML accessible
 
 La structure HTML doit être sémantique et inclure des attributs ARIA pour une meilleure compréhension par les technologies d’assistance.
 
@@ -17,12 +17,12 @@ La structure HTML doit être sémantique et inclure des attributs ARIA pour une 
 - **Étiquette (`<label>`) :** Associée au champ de recherche pour indiquer son objectif.
 - **Bouton de Soumission (`<button type="submit">`) :** Permet de soumettre la requête de recherche.
 
-### Comportement JavaScript Accessible
+### Comportement javascript accessible
 
 - **Validation en Temps Réel :** Fournir des retours immédiats sur la validité de la requête sans perturber l'utilisateur.
 - **Gestion des Suggestions :** Si des suggestions sont proposées, s'assurer qu'elles sont accessibles via le clavier et lisibles par les technologies d’assistance.
 
-## Bonnes Pratiques d’Accessibilité
+## Bonnes pratiques d’accessibilité
 
 - **Respect des Standards :**
   - Suivre les directives WCAG 2.1, notamment le critère 1.3.1 sur l'information et les relations.
@@ -31,13 +31,13 @@ La structure HTML doit être sémantique et inclure des attributs ARIA pour une 
 - **Compatibilité Multi-Appareils :**
   - Tester le champ de recherche sur différents appareils et navigateurs pour garantir une expérience uniforme.
 
-## Recommandations Supplémentaires
+## Recommandations supplémentaires
 
 - **Amélioration de l’Expérience Utilisateur :**
   - Fournir des indications sur le type de contenu recherché directement dans l'étiquette ou via des placeholders.
   - Assurer que le champ de recherche est facilement repérable sur la page, avec un contraste suffisant et une taille appropriée.
 
-## Exemple de Code Accessible
+## Exemple de code accessible
 
 ```html
 <form role="search" aria-label="Recherche sur le site">
