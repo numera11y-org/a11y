@@ -1,4 +1,4 @@
-# Guide d’Implémentation d’un Accordéon Accessible
+# Guide d’implémentation d’un Accordéon accessible
 
 ## Introduction
 
@@ -6,7 +6,7 @@ Un accordéon est un composant d’interface utilisateur permettant d’afficher
 
 **Démo :** [CodePen](https://codepen.io/numera11y/pen/vEBRdMY)
 
-## Description du Code
+## Description du code
 
 ### Structure HTML
 
@@ -24,7 +24,7 @@ Un accordéon est un composant d’interface utilisateur permettant d’afficher
 - L’état de `aria-expanded` est mis à jour dynamiquement pour refléter l’état d’ouverture ou de fermeture.
 - La navigation clavier est gérée pour permettre aux utilisateurs d’utiliser les touches fléchées afin de déplacer le focus entre les en-têtes.
 
-## Bonnes Pratiques d’Accessibilité
+## Bonnes pratiques d’accessibilité
 
 - **Attributs ARIA :**
 
@@ -32,29 +32,29 @@ Un accordéon est un composant d’interface utilisateur permettant d’afficher
   - Associer `aria-expanded` et `aria-controls` pour indiquer l’état et l’association des boutons et des contenus.
   - Marquer les sections de contenu avec `role="region"` pour décrire leur fonction.
 
-- **Gestion des États :**
+- **Gestion des états :**
 
   - Mettre à jour dynamiquement les attributs ARIA en fonction de l’interaction.
 
-- **Navigation Clavier :**
+- **Navigation clavier :**
 
   - Permettre l’utilisation des touches fléchées pour parcourir les en-têtes.
 
-## Recommandations Supplémentaires
+## Recommandations supplémentaires
 
-- **Libellés Explicites :**
+- **Libellés explicites :**
 
   - Ajouter des textes descriptifs aux boutons pour améliorer la compréhension du contenu.
 
-- **Transitions Fluides :**
+- **Transitions fluides :**
 
   - Intégrer des animations légères pour une meilleure expérience utilisateur.
 
-- **Tests Compatibilité :**
+- **Tests compatibilité :**
 
   - Tester l’accordéon avec différentes technologies d’assistance (lecteurs d’écran, claviers alternatifs).
 
-## Exemple Simplifié
+## Exemple simplifié
 
 ```html
 <div role="tablist">
