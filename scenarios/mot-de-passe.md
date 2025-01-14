@@ -13,15 +13,15 @@ Les champs de mot de passe sont essentiels pour la sécurité des utilisateurs. 
 La structure HTML doit être sémantique et inclure des attributs ARIA pour une meilleure compréhension par les technologies d’assistance.
 
 - **Étiquette (`<label>`) :** Associée au champ de saisie pour indiquer son objectif.
-- **Champ de Saisie (`<input type="password">`) :** Utilisé pour la saisie du mot de passe.
-- **Bouton de Visibilité (`<button>`) :** Permet de basculer la visibilité du mot de passe.
-- **Attributs ARIA et Propriétés :**
+- **Champ de saisie (`<input type="password">`) :** Utilisé pour la saisie du mot de passe.
+- **Bouton de visibilité (`<button>`) :** Permet de basculer la visibilité du mot de passe.
+- **Attributs ARIA et propriétés :**
   - `aria-label` sur le bouton pour indiquer son action, par exemple, "Afficher le mot de passe" ou "Masquer le mot de passe".
   - `aria-live="polite"` sur un élément contenant des messages d'erreur ou d'information pour informer les utilisateurs des changements.
 
 ### Comportement JavaScript accessible
 
-- **Gestion de la Visibilité du Mot de Passe :** Le bouton doit permettre de basculer entre les modes texte et mot de passe, en mettant à jour l'attribut `type` du champ de saisie.
+- **Gestion de la visibilité du Mot de Passe :** Le bouton doit permettre de basculer entre les modes texte et mot de passe, en mettant à jour l'attribut `type` du champ de saisie.
 - **Mise à Jour des Attributs ARIA :** Mettre à jour dynamiquement le `aria-label` du bouton en fonction de l'état actuel (affiché ou masqué).
 - **Validation en Temps Réel :** Fournir des retours immédiats sur la validité du mot de passe sans perturber l'utilisateur.
 
