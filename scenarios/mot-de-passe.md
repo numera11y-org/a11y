@@ -1,4 +1,4 @@
-# Guide d’Implémentation d’un Champ de Mot de Passe Accessible
+# Guide d’Implémentation d’un champ de mot de passe accessible
 
 ## Introduction
 
