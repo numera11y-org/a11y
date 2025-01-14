@@ -22,7 +22,7 @@ La structure HTML doit être sémantique et inclure des attributs ARIA pour une 
 ### Comportement JavaScript accessible
 
 - **Gestion de la visibilité du mot de passe :** Le bouton doit permettre de basculer entre les modes texte et mot de passe, en mettant à jour l'attribut `type` du champ de saisie.
-- **Mise à Jour des attributs ARIA :** Mettre à jour dynamiquement le `aria-label` du bouton en fonction de l'état actuel (affiché ou masqué).
+- **Mise à jour des attributs ARIA :** Mettre à jour dynamiquement le `aria-label` du bouton en fonction de l'état actuel (affiché ou masqué).
 - **Validation en Temps Réel :** Fournir des retours immédiats sur la validité du mot de passe sans perturber l'utilisateur.
 
 ## Bonnes pratiques d’Accessibilité
