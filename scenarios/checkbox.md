@@ -1,4 +1,4 @@
-# Guide d’Implémentation d’une Case à Cocher Accessible
+# Guide d’implémentation d’une case à cocher accessible
 
 ## Introduction
 
@@ -6,40 +6,40 @@ Les cases à cocher sont des éléments d'interface utilisateur courants permett
 
 **Démo :** [CodePen](https://codepen.io/numera11y/pen/azoYErL)
 
-## Description Technique
+## Description technique
 
-### Structure HTML Accessible
+### Structure HTML accessible
 
 La structure HTML doit être sémantique et inclure des attributs ARIA pour une meilleure compréhension par les technologies d’assistance.
 
 - **Étiquette (`<label>`) :** Associée à la case à cocher pour indiquer son objectif.
-- **Case à Cocher (`<input type="checkbox">`) :** Utilisée pour la sélection ou la désélection d'une option.
-- **Attributs ARIA et Propriétés :**
+- **Case à cocher (`<input type="checkbox">`) :** Utilisée pour la sélection ou la désélection d'une option.
+- **Attributs ARIA et propriétés :**
   - `aria-checked` : Indique l'état actuel de la case à cocher (vrai, faux ou indéterminé).
   - `aria-labelledby` ou `aria-label` : Fournit une description accessible si l'étiquette visible n'est pas suffisante.
 
-### Comportement JavaScript Accessible
+### Comportement JavaScript accessible
 
-- **Mise à Jour Dynamique :** Si l'état de la case à cocher est modifié via JavaScript, s'assurer que l'attribut `aria-checked` est mis à jour en conséquence.
+- **Mise à jour dynamique :** Si l'état de la case à cocher est modifié via JavaScript, s'assurer que l'attribut `aria-checked` est mis à jour en conséquence.
 - **Gestion du Focus :** Assurer que la case à cocher est focusable et que les utilisateurs peuvent naviguer jusqu'à elle en utilisant le clavier.
 
-## Bonnes Pratiques d’Accessibilité
+## Bonnes pratiques d’accessibilité
 
-- **Respect des Standards :**
+- **Respect des standards :**
   - Suivre les directives WCAG 2.1, notamment le critère 4.1.2 sur les propriétés et états du nom.
-- **Messages Visuels et Auditifs :**
+- **Messages visuels et auditifs :**
   - Fournir des retours visuels clairs sur l'état de la case à cocher (par exemple, une coche visible lorsqu'elle est sélectionnée).
   - Assurer que les changements d'état sont annoncés par les technologies d’assistance.
-- **Compatibilité Multi-Appareils :**
+- **Compatibilité multi-appareils :**
   - Tester la case à cocher sur différents appareils et navigateurs pour garantir une expérience uniforme.
 
-## Recommandations Supplémentaires
+## Recommandations supplémentaires
 
-- **Amélioration de l’Expérience Utilisateur :**
+- **Amélioration de l’expérience utilisateur :**
   - Fournir des descriptions supplémentaires si nécessaire pour clarifier l'objectif de la case à cocher.
   - Assurer que la zone cliquable est suffisamment grande pour faciliter l'interaction, en incluant l'étiquette associée.
 
-## Exemple de Code Accessible
+## Exemple de code accessible
 
 ```html
 <form>
