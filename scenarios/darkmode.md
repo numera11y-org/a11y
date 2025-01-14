@@ -1,4 +1,4 @@
-# Guide d’Implémentation d’un DarkMode Accessible
+# Guide d’implémentation d’un DarkMode accessible
 
 ## Introduction
 
@@ -6,9 +6,9 @@ Permettre aux utilisateurs de basculer entre les modes clair et sombre améliore
 
 **Démo :** [CodePen](https://codepen.io/numera11y/pen/dPbmJQm)
 
-## Description Technique
+## Description technique
 
-### Structure HTML Accessible
+### Structure HTML accessible
 
 La structure HTML doit être sémantique et inclure des attributs ARIA pour une meilleure compréhension par les technologies d’assistance.
 
@@ -17,28 +17,28 @@ La structure HTML doit être sémantique et inclure des attributs ARIA pour une 
   - `aria-label` pour décrire l'action du bouton, par exemple, "Activer le mode sombre" ou "Activer le mode clair".
   - `aria-live="polite"` sur un élément contenant le nom du mode actuel pour informer les utilisateurs des changements.
 
-### Comportement JavaScript Accessible
+### Comportement JavaScript accessible
 
 - **Gestion des Événements :** Le bouton doit écouter les événements de clic pour basculer entre les modes.
 - **Mise à Jour des Attributs ARIA :** Mettre à jour dynamiquement le `aria-label` du bouton en fonction du mode actif.
 - **Stockage des Préférences :** Utiliser le `localStorage` pour mémoriser la préférence de l'utilisateur et appliquer le mode choisi lors des visites ultérieures.
 
-## Bonnes Pratiques d’Accessibilité
+## Bonnes pratiques d’accessibilité
 
-- **Respect des Standards :**
+- **Respect des standards :**
   - Suivre les directives WCAG 2.1, notamment le critère 1.4.3 sur le contraste des couleurs.
-- **Messages Visuels et Auditifs :**
+- **Messages visuels et auditifs :**
   - Fournir des retours visuels clairs lors du changement de mode, comme une transition douce entre les thèmes.
-- **Compatibilité Multi-Appareils :**
+- **Compatibilité multi-appareils :**
   - Tester le sélecteur sur différents appareils et navigateurs pour garantir une expérience uniforme.
 
-## Recommandations Supplémentaires
+## Recommandations supplémentaires
 
-- **Amélioration de l’Expérience Utilisateur :**
+- **Amélioration de l’expérience utilisateur :**
   - Ajouter des transitions CSS pour adoucir le changement de mode.
   - Permettre la détection automatique du mode préféré de l'utilisateur via le media query `prefers-color-scheme`.
 
-## Exemple de Code Accessible
+## Exemple de code accessible
 
 ```html
 <button id="mode-toggle" aria-label="Activer le mode sombre">Changer de mode</button>
