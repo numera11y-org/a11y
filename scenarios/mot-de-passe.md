@@ -6,7 +6,7 @@ Les champs de mot de passe sont essentiels pour la sécurité des utilisateurs. 
 
 **Démo :** [CodePen](https://codepen.io/numera11y/pen/LEPdepx)
 
-## Description Technique
+## Description technique
 
 ### Structure HTML Accessible
 
@@ -19,28 +19,28 @@ La structure HTML doit être sémantique et inclure des attributs ARIA pour une 
   - `aria-label` sur le bouton pour indiquer son action, par exemple, "Afficher le mot de passe" ou "Masquer le mot de passe".
   - `aria-live="polite"` sur un élément contenant des messages d'erreur ou d'information pour informer les utilisateurs des changements.
 
-### Comportement JavaScript Accessible
+### Comportement JavaScript accessible
 
 - **Gestion de la Visibilité du Mot de Passe :** Le bouton doit permettre de basculer entre les modes texte et mot de passe, en mettant à jour l'attribut `type` du champ de saisie.
 - **Mise à Jour des Attributs ARIA :** Mettre à jour dynamiquement le `aria-label` du bouton en fonction de l'état actuel (affiché ou masqué).
 - **Validation en Temps Réel :** Fournir des retours immédiats sur la validité du mot de passe sans perturber l'utilisateur.
 
-## Bonnes Pratiques d’Accessibilité
+## Bonnes pratiques d’Accessibilité
 
-- **Respect des Standards :**
+- **Respect des standards :**
   - Suivre les directives WCAG 2.1, notamment le critère 1.3.1 sur l'information et les relations.
-- **Messages Visuels et Auditifs :**
+- **Messages visuels et auditifs :**
   - Utiliser des messages d'erreur clairs et concis, visibles et audibles pour les technologies d’assistance.
-- **Compatibilité Multi-Appareils :**
+- **Compatibilité multi-appareils :**
   - Tester le champ de mot de passe sur différents appareils et navigateurs pour garantir une expérience uniforme.
 
-## Recommandations Supplémentaires
+## Recommandations supplémentaires
 
-- **Amélioration de l’Expérience Utilisateur :**
+- **Amélioration de l'expérience utilisateur :**
   - Ajouter des indications sur les critères de complexité du mot de passe requis.
   - Fournir une option pour générer un mot de passe sécurisé automatiquement.
 
-## Exemple de Code Accessible
+## Exemple de code accessible
 
 ```html
 <form>
