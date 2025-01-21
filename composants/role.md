@@ -52,6 +52,8 @@
 
 **Quand l'utiliser** : Uniquement si vous ne pouvez pas utiliser les balises `<ul>`, `<ol>` et `<li>` natives.
 
+---
+
 # Rôles interactifs
 
 ## role="button"
@@ -78,6 +80,8 @@
 
 **Quand l'utiliser** : Sur les conteneurs d'onglets, les onglets individuels et les panneaux de contenu associés.
 
+---
+
 # Rôles de structure de données
 
 ## role="table", role="row", role="cell"
@@ -91,6 +95,8 @@
 **Utilisation** : Pour des grilles de données interactives.
 
 **Quand l'utiliser** : Sur des tableaux complexes avec fonctionnalités interactives (tri, filtrage, etc.).
+
+---
 
 # Conseils généraux d'utilisation
 
