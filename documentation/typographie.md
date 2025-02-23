@@ -83,25 +83,60 @@ Les traits des lettres doivent avoir un contraste suffisant pour être lisibles 
 
 Le choix d'une police accessible est crucial pour garantir une meilleure lisibilité à tous les utilisateurs, en particulier ceux ayant des déficiences visuelles ou des troubles de la lecture. Voici une liste mise à jour des polices recommandées pour l'accessibilité :
 
+### Accessible DFA
+Une police conçue pour maximiser l’accessibilité et améliorer la lisibilité générale.
+
+> [Télécharger](https://github.com/Orange-OpenSource/font-accessible-dfa)
+
+### Andika
+Une police sans serif simple et épurée, adaptée aux besoins éducatifs et à la lecture facile.
+
+> [Télécharger](https://fonts.google.com/specimen/Andika)
+
+### APHont
+Développée par l'American Printing House for the Blind, cette police est optimisée pour les lecteurs malvoyants.
+
+> [Télécharger](https://www.fontspace.com/aphont-font-f4926)
+
 ### Atkinson Hyperlegible
 Conçue spécifiquement pour l'accessibilité, elle maximise la différenciation des caractères.
 
 > [Télécharger](https://www.brailleinstitute.org/freefont/)
 
-### PT Sans
-Une police sans serif disponible gratuitement sur Google Fonts.
+### BBC Reith
+Créée par la BBC, cette police est optimisée pour la lisibilité sur tous les supports, notamment numériques.
 
-> [Télécharger](https://fonts.google.com/specimen/PT+Sans)
+> [Télécharger](https://www.bbc.co.uk/branding/reith-font)
 
 ### Calleo
 Une autre option sans serif, avec certaines variantes gratuites.
 
 > [Télécharger](https://www.fontfabric.com/fonts/calleo/)
 
-### Tiresias
-Créée par l'institut national des aveugles anglais de Londres, c'est une référence pour la lisibilité des personnes à visibilité réduite
+### Eido
+Une police moderne qui met en avant clarté et lisibilité.
 
-> [Télécharger](https://www.fontsquirrel.com/fonts/tiresias-infofont)
+> [Télécharger](https://lpc.univ-amu.fr/en/eido-font.html)
+
+### Fluent Calibri
+Ces variantes apportent une touche moderne tout en restant accessibles grâce à leur structure claire.
+
+> [Télécharger](https://www.microsoft.com/en-us/download/details.aspx?id=50721)
+
+### Fluent Sitka
+Ces variantes apportent une touche moderne tout en restant accessibles grâce à leur structure claire.
+
+> [Télécharger](https://www.microsoft.com/en-us/download/details.aspx?id=50721)
+
+### FS Me
+Créée en collaboration avec Mencap (une organisation britannique), cette police est pensée pour être accessible aux personnes ayant des troubles d’apprentissage.
+
+> [Télécharger](https://fontfoundryhub.com/best-fs-me-font-pairings-alternatives/)
+
+### Lexie Readable
+Une alternative accessible qui combine simplicité et clarté dans ses formes typographiques.
+
+> [Télécharger](https://www.k-type.com/fonts/lexie-readable/)
 
 ### Luciole
 Conçue spécifiquement pour les personnes malvoyantes, elle offre une meilleure expérience de lecture grâce à sa structure, son espacement et son encombrement optimisés.
@@ -113,23 +148,47 @@ Développée pour l'État français, elle allie sobriété et lisibilité, avec 
 
 > [Télécharger](https://www.systeme-de-design.gouv.fr/fondamentaux/typographie/)
 
-### BBC Reith
-Créée par la BBC, cette police est optimisée pour la lisibilité sur tous les supports, notamment numériques.
+### Maxular & Maxular Rx  
+Maxular est une famille de polices slab serif arrondies spécialement conçues par Steven Skaggs. La version *Rx* a été scientifiquement testée pour répondre aux besoins des personnes atteintes de dégénérescence maculaire (MD). Ses caractéristiques incluent :  
+- Une grande hauteur d’x (x-height) qui améliore la visibilité.  
+- Des espacements interlettres plus larges.  
+- Des terminaisons arrondies évitant les distorsions angulaires.  
+- Une conception optimisée pour la vision périphérique.  
 
-> [Télécharger](https://www.bbc.co.uk/branding/reith-font)
+> [Télécharger](https://delvefonts.com/fonts/maxular/)
+
+### Omotype
+Optimisée pour les lecteurs ayant des troubles spécifiques comme la dyslexie ou d'autres handicaps visuels.
+
+> [Télécharger](https://omotype.com/)
+
+### PT Sans
+Une police sans serif disponible gratuitement sur Google Fonts.
+
+> [Télécharger](https://fonts.google.com/specimen/PT+Sans)
+
+### Tiresias
+Créée par l'institut national des aveugles anglais de Londres, c'est une référence pour la lisibilité des personnes à visibilité réduite
+
+> [Télécharger](https://www.fontsquirrel.com/fonts/tiresias-infofont)
 
 ---
-
-### Verdana
-Recommandée pour sa lisibilité sur écran, particulièrement pour les chiffres5.
-
-### Tahoma
-Appréciée pour sa clarté, notamment pour les personnes ayant des difficultés de compréhension5.
 
 ### Helvetica
 Une police sans empattement classique, souvent recommandée pour l'accessibilité
 
+### Tahoma
+Appréciée pour sa clarté, notamment pour les personnes ayant des difficultés de compréhension5.
+
+### Verdana
+Recommandée pour sa lisibilité sur écran, particulièrement pour les chiffres5.
+
 ## Polices spécifiques pour les DYS
+
+### Dyslexie
+Spécifiquement conçue pour les dyslexiques, elle améliore la différenciation des caractères afin de réduire les confusions fréquentes.
+
+> [Télécharger](https://dyslexiefont.com/en/)
 
 ### OpenDyslexic
 Conçue pour les personnes dyslexiques, elle présente des caractéristiques uniques comme une base plus lourde et des lettres inclinées pour faciliter la lecture.
@@ -140,6 +199,11 @@ Conçue pour les personnes dyslexiques, elle présente des caractéristiques uni
 Optimisée pour améliorer la vitesse de lecture et la compréhension, particulièrement utile pour les personnes dyslexiques.
 
 > [Télécharger](https://www.lexend.com/)
+
+### Sylexiad Sans & Sylexiad Serif
+Ces polices sont conçues spécifiquement pour répondre aux besoins des lecteurs dyslexiques tout en offrant une flexibilité entre styles sans-serif et serif.
+
+> [Télécharger](https://www.sylexiad.com/)
 
 Il est important de noter que l'efficacité de ces polices peut varier selon les individus. Par exemple, bien que OpenDyslexic soit spécifiquement conçue pour les dyslexiques, son efficacité n'a pas été scientifiquement prouvée pour tous les utilisateurs. Il est donc recommandé de tester différentes polices pour trouver celle qui convient le mieux à chaque utilisateur.
 
