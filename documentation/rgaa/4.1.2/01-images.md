@@ -18,6 +18,56 @@
    *   Contenu de l’attribut WAI-ARIA `aria-label`
 5. Si au moins une alternative textuelle est trouvée, **le test est validé**.
 
+#### Exemples pour la règle 1.1.1
+
+Ces exemples illustrent différentes manières de fournir des alternatives textuelles pour les images porteuses d'information, conformément à la règle 1.1.1 du RGAA. Il est important de choisir la méthode la plus appropriée en fonction du contexte et du contenu de l'image.
+
+**Exemples non conformes**
+
+1. Image sans alternative textuelle :
+```html
+<img src="logo-entreprise.png">
+```
+
+2. Image avec un attribut alt vide alors qu'elle est porteuse d'information :
+```html
+<img src="graphique-resultats.png" alt="">
+```
+
+3. Élément avec role="img" sans alternative textuelle :
+```html
+<div role="img" style="background-image: url('icone-telephone.png');"></div>
+```
+
+**Exemples conformes**
+
+1. Image avec attribut alt :
+```html
+<img src="logo-entreprise.png" alt="Logo de l'entreprise XYZ">
+```
+
+2. Image avec attribut aria-label :
+```html
+<img src="graphique-resultats.png" aria-label="Graphique montrant une augmentation des ventes de 15% en 2024">
+```
+
+3. Élément avec role="img" et aria-labelledby :
+```html
+<div role="img" style="background-image: url('icone-telephone.png');" aria-labelledby="desc-tel"></div>
+<p id="desc-tel">Icône de téléphone pour le service client</p>
+```
+
+4. Image avec attribut title (à utiliser avec précaution) :
+```html
+<img src="carte-interactive.png" alt="Carte interactive des points de vente" title="Cliquez sur la carte pour voir les détails des points de vente">
+```
+
+5. Image complexe avec une description détaillée :
+```html
+<img src="diagramme-processus.png" alt="Diagramme du processus de production" aria-describedby="desc-processus">
+<div id="desc-processus" hidden>Description détaillée du diagramme : étape 1 - réception des matières premières, étape 2 - contrôle qualité, étape 3 - assemblage, étape 4 - tests finaux, étape 5 - emballage et expédition.</div>
+```
+
 ### 1.1.2 Chaque zone d’une image réactive (balise `<area>`) porteuse d’information a-t-elle une alternative textuelle ?
 
 #### Méthodologie du test 1.1.2
